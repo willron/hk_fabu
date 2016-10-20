@@ -1,0 +1,1158 @@
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 00:43:11 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1317e70
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1317e70 pid: 17649 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17649)
+spawned uWSGI worker 1 (pid: 17658, cores: 1)
+spawned uWSGI worker 2 (pid: 17659, cores: 1)
+spawned uWSGI worker 3 (pid: 17660, cores: 1)
+spawned uWSGI worker 4 (pid: 17661, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 00:50:24 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1deedd0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1deedd0 pid: 17983 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 17983)
+spawned uWSGI worker 1 (pid: 17992, cores: 1)
+spawned uWSGI worker 2 (pid: 17993, cores: 1)
+spawned uWSGI worker 3 (pid: 17994, cores: 1)
+spawned uWSGI worker 4 (pid: 17995, cores: 1)
+[pid: 17994|app: 0|req: 1/1] 172.18.0.44 () {50 vars in 896 bytes} [Thu Sep 29 00:50:29 2016] GET /startstoprestart/ => generated 4538 bytes in 29 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 17994|app: 0|req: 2/2] 172.18.0.44 () {50 vars in 956 bytes} [Thu Sep 29 00:50:38 2016] GET /startstoprestart/?project_name=appointment => generated 91 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 00:54:08 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x19de890
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x19de890 pid: 18101 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 18101)
+spawned uWSGI worker 1 (pid: 18110, cores: 1)
+spawned uWSGI worker 2 (pid: 18111, cores: 1)
+spawned uWSGI worker 3 (pid: 18112, cores: 1)
+spawned uWSGI worker 4 (pid: 18113, cores: 1)
+[pid: 18112|app: 0|req: 1/1] 172.18.0.38 () {50 vars in 896 bytes} [Thu Sep 29 00:54:15 2016] GET /startstoprestart/ => generated 4538 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 00:54:32 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1ff0890
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1ff0890 pid: 18160 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 18160)
+spawned uWSGI worker 1 (pid: 18169, cores: 1)
+spawned uWSGI worker 2 (pid: 18170, cores: 1)
+spawned uWSGI worker 3 (pid: 18171, cores: 1)
+spawned uWSGI worker 4 (pid: 18172, cores: 1)
+[pid: 18170|app: 0|req: 1/1] 172.18.0.38 () {50 vars in 896 bytes} [Thu Sep 29 00:54:37 2016] GET /startstoprestart/ => generated 4538 bytes in 31 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 18169|app: 0|req: 1/2] 172.18.0.38 () {50 vars in 896 bytes} [Thu Sep 29 00:54:39 2016] GET /startstoprestart/ => generated 4538 bytes in 32 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 00:56:25 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xb0edd0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xb0edd0 pid: 18240 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 18240)
+spawned uWSGI worker 1 (pid: 18249, cores: 1)
+spawned uWSGI worker 2 (pid: 18250, cores: 1)
+spawned uWSGI worker 3 (pid: 18251, cores: 1)
+spawned uWSGI worker 4 (pid: 18252, cores: 1)
+[pid: 18252|app: 0|req: 1/1] 172.18.0.38 () {50 vars in 896 bytes} [Thu Sep 29 00:56:31 2016] GET /startstoprestart/ => generated 4538 bytes in 33 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 18250|app: 0|req: 1/2] 172.18.0.38 () {50 vars in 896 bytes} [Thu Sep 29 00:56:32 2016] GET /startstoprestart/ => generated 4538 bytes in 31 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 01:32:02 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xe85e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xe85e80 pid: 19100 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19100)
+spawned uWSGI worker 1 (pid: 19109, cores: 1)
+spawned uWSGI worker 2 (pid: 19110, cores: 1)
+spawned uWSGI worker 3 (pid: 19111, cores: 1)
+spawned uWSGI worker 4 (pid: 19112, cores: 1)
+[pid: 19109|app: 0|req: 1/1] 172.18.0.38 () {48 vars in 831 bytes} [Thu Sep 29 01:33:47 2016] GET / => generated 12985 bytes in 138 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 19111|app: 0|req: 1/2] 172.18.0.38 () {46 vars in 758 bytes} [Thu Sep 29 01:33:48 2016] GET /favicon.ico => generated 2888 bytes in 18 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 19109|app: 0|req: 2/3] 172.18.0.44 () {46 vars in 818 bytes} [Thu Sep 29 01:33:48 2016] GET /favicon.ico => generated 2888 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19109|app: 0|req: 3/4] 172.18.0.44 () {50 vars in 881 bytes} [Thu Sep 29 01:34:01 2016] GET /logout => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 123 bytes (1 switches on core 0)
+[pid: 19111|app: 0|req: 2/5] 172.18.0.44 () {50 vars in 883 bytes} [Thu Sep 29 01:34:01 2016] GET /logout/ => generated 0 bytes in 35 msecs (HTTP/1.1 302) 4 headers in 192 bytes (1 switches on core 0)
+[pid: 19109|app: 0|req: 4/6] 172.18.0.44 () {50 vars in 837 bytes} [Thu Sep 29 01:34:01 2016] GET /login/ => generated 834 bytes in 24 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19109|app: 0|req: 5/7] 172.18.0.44 () {54 vars in 1004 bytes} [Thu Sep 29 01:34:12 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 01:45:03 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x27e5e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x27e5e80 pid: 19172 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19172)
+spawned uWSGI worker 1 (pid: 19181, cores: 1)
+spawned uWSGI worker 2 (pid: 19182, cores: 1)
+spawned uWSGI worker 3 (pid: 19183, cores: 1)
+spawned uWSGI worker 4 (pid: 19184, cores: 1)
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./index/views.py", line 105, in login
+    return render_to_response('login.html',context_instance=RequestContext(request))
+TypeError: render_to_response() got an unexpected keyword argument 'context_instance'
+Thu Sep 29 01:45:11 2016 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /login/ (ip 172.18.0.38) !!!
+Thu Sep 29 01:45:11 2016 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 331] during GET /login/ (172.18.0.38)
+IOError: write error
+[pid: 19183|app: 0|req: 1/1] 172.18.0.38 () {48 vars in 843 bytes} [Thu Sep 29 01:45:11 2016] GET /login/ => generated 63894 bytes in 181 msecs (HTTP/1.1 500) 3 headers in 106 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 01:50:37 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x13b3e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x13b3e80 pid: 19220 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19220)
+spawned uWSGI worker 1 (pid: 19229, cores: 1)
+spawned uWSGI worker 2 (pid: 19230, cores: 1)
+spawned uWSGI worker 3 (pid: 19231, cores: 1)
+spawned uWSGI worker 4 (pid: 19232, cores: 1)
+[pid: 19231|app: 0|req: 1/1] 172.18.0.44 () {48 vars in 831 bytes} [Thu Sep 29 01:50:41 2016] GET / => generated 0 bytes in 21 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "./index/views.py", line 105, in login
+    return render_to_response('login.html',{},context_instance=RequestContext(request))
+TypeError: render_to_response() got an unexpected keyword argument 'context_instance'
+Thu Sep 29 01:50:42 2016 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /login/ (ip 172.18.0.38) !!!
+Thu Sep 29 01:50:42 2016 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 331] during GET /login/ (172.18.0.38)
+IOError: write error
+[pid: 19232|app: 0|req: 1/2] 172.18.0.38 () {48 vars in 843 bytes} [Thu Sep 29 01:50:42 2016] GET /login/ => generated 63894 bytes in 111 msecs (HTTP/1.1 500) 3 headers in 106 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 01:51:49 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xe11e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xe11e80 pid: 19254 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19254)
+spawned uWSGI worker 1 (pid: 19263, cores: 1)
+spawned uWSGI worker 2 (pid: 19264, cores: 1)
+spawned uWSGI worker 3 (pid: 19265, cores: 1)
+spawned uWSGI worker 4 (pid: 19266, cores: 1)
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./hk_fabu2/urls.py", line 18, in <module>
+    from index import views as index_views
+  File "./index/views.py", line 105
+    return render(context_instance=RequestContext(request), 'login.html')
+SyntaxError: non-keyword arg after keyword arg
+Thu Sep 29 01:51:51 2016 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /login/ (ip 172.18.0.44) !!!
+Thu Sep 29 01:51:51 2016 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 331] during GET /login/ (172.18.0.44)
+IOError: write error
+[pid: 19266|app: 0|req: 1/1] 172.18.0.44 () {48 vars in 843 bytes} [Thu Sep 29 01:51:51 2016] GET /login/ => generated 63894 bytes in 182 msecs (HTTP/1.1 500) 3 headers in 106 bytes (0 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 01:52:40 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1c98e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1c98e80 pid: 19288 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19288)
+spawned uWSGI worker 1 (pid: 19297, cores: 1)
+spawned uWSGI worker 2 (pid: 19298, cores: 1)
+spawned uWSGI worker 3 (pid: 19299, cores: 1)
+spawned uWSGI worker 4 (pid: 19300, cores: 1)
+Internal Server Error: /login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/exception.py", line 39, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/local/lib/python2.7/site-packages/django/core/handlers/base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 270, in resolve
+    for pattern in self.url_patterns:
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 313, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/site-packages/django/utils/functional.py", line 35, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/site-packages/django/urls/resolvers.py", line 306, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/local/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "./hk_fabu2/urls.py", line 18, in <module>
+    from index import views as index_views
+  File "./index/views.py", line 105
+    return render(context_instance=RequestContext(request), 'login.html',{})
+SyntaxError: non-keyword arg after keyword arg
+Thu Sep 29 01:52:42 2016 - SIGPIPE: writing to a closed pipe/socket/fd (probably the client disconnected) on request /login/ (ip 172.18.0.44) !!!
+Thu Sep 29 01:52:42 2016 - uwsgi_response_write_body_do(): Broken pipe [core/writer.c line 331] during GET /login/ (172.18.0.44)
+IOError: write error
+[pid: 19297|app: 0|req: 1/1] 172.18.0.44 () {50 vars in 874 bytes} [Thu Sep 29 01:52:41 2016] GET /login/ => generated 63894 bytes in 127 msecs (HTTP/1.1 500) 3 headers in 106 bytes (0 switches on core 0)
+[pid: 19298|app: 0|req: 1/2] 172.18.0.44 () {50 vars in 874 bytes} [Thu Sep 29 01:53:04 2016] GET /login/ => generated 834 bytes in 50 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19298|app: 0|req: 2/3] 172.18.0.44 () {54 vars in 1004 bytes} [Thu Sep 29 01:53:08 2016] POST /login/ => generated 2537 bytes in 6 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 01:54:31 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x197de80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x197de80 pid: 19345 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19345)
+spawned uWSGI worker 1 (pid: 19354, cores: 1)
+spawned uWSGI worker 2 (pid: 19355, cores: 1)
+spawned uWSGI worker 3 (pid: 19356, cores: 1)
+spawned uWSGI worker 4 (pid: 19357, cores: 1)
+[pid: 19354|app: 0|req: 1/1] 172.18.0.44 () {56 vars in 1035 bytes} [Thu Sep 29 01:54:39 2016] POST /login/ => generated 0 bytes in 36 msecs (HTTP/1.1 302) 5 headers in 247 bytes (1 switches on core 0)
+[pid: 19357|app: 0|req: 1/2] 172.18.0.44 () {50 vars in 875 bytes} [Thu Sep 29 01:54:39 2016] GET / => generated 11381 bytes in 134 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 19354|app: 0|req: 2/3] 172.18.0.38 () {50 vars in 929 bytes} [Thu Sep 29 01:54:52 2016] GET /GetProjectServerIP/?project_name=chat => generated 73 bytes in 7 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 19354|app: 0|req: 3/4] 172.18.0.38 () {50 vars in 883 bytes} [Thu Sep 29 01:54:56 2016] GET /logout/ => generated 0 bytes in 32 msecs (HTTP/1.1 302) 4 headers in 192 bytes (1 switches on core 0)
+[pid: 19357|app: 0|req: 2/5] 172.18.0.44 () {50 vars in 837 bytes} [Thu Sep 29 01:54:56 2016] GET /login/ => generated 834 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 02:26:35 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2226dd0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2226dd0 pid: 19643 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19643)
+spawned uWSGI worker 1 (pid: 19652, cores: 1)
+spawned uWSGI worker 2 (pid: 19653, cores: 1)
+spawned uWSGI worker 3 (pid: 19654, cores: 1)
+spawned uWSGI worker 4 (pid: 19655, cores: 1)
+[pid: 19653|app: 0|req: 1/1] 172.18.0.44 () {46 vars in 793 bytes} [Thu Sep 29 02:27:58 2016] GET / => generated 0 bytes in 18 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 19655|app: 0|req: 1/2] 172.18.0.44 () {46 vars in 805 bytes} [Thu Sep 29 02:27:58 2016] GET /login/ => generated 834 bytes in 50 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 19653|app: 0|req: 2/3] 172.18.0.38 () {44 vars in 720 bytes} [Thu Sep 29 02:27:59 2016] GET /favicon.ico => generated 2888 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 19655|app: 0|req: 2/4] 172.18.0.38 () {44 vars in 780 bytes} [Thu Sep 29 02:27:59 2016] GET /favicon.ico => generated 2888 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19653|app: 0|req: 3/5] 172.18.0.44 () {52 vars in 966 bytes} [Thu Sep 29 02:28:01 2016] POST /login/ => generated 2537 bytes in 8 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19653|app: 0|req: 4/6] 172.18.0.44 () {46 vars in 805 bytes} [Thu Sep 29 02:29:16 2016] GET /login/ => generated 834 bytes in 27 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19653|app: 0|req: 5/7] 172.18.0.38 () {52 vars in 966 bytes} [Thu Sep 29 02:29:18 2016] POST /login/ => generated 2537 bytes in 3 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19653|app: 0|req: 6/8] 172.18.0.44 () {48 vars in 844 bytes} [Thu Sep 29 02:30:37 2016] GET /login/ => generated 834 bytes in 26 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19653|app: 0|req: 7/9] 172.18.0.38 () {54 vars in 1005 bytes} [Thu Sep 29 02:30:43 2016] POST /login/ => generated 2537 bytes in 3 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19653|app: 0|req: 8/10] 172.18.0.44 () {48 vars in 844 bytes} [Thu Sep 29 02:30:47 2016] GET /login/ => generated 834 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+[pid: 19655|app: 0|req: 3/11] 172.18.0.44 () {52 vars in 897 bytes} [Thu Sep 29 02:30:49 2016] GET /login/ => generated 834 bytes in 30 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19653|app: 0|req: 9/12] 172.18.0.38 () {54 vars in 1005 bytes} [Thu Sep 29 02:30:51 2016] POST /login/ => generated 2537 bytes in 3 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 02:38:44 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xcc8dd0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0xcc8dd0 pid: 19732 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19732)
+spawned uWSGI worker 1 (pid: 19741, cores: 1)
+spawned uWSGI worker 2 (pid: 19742, cores: 1)
+spawned uWSGI worker 3 (pid: 19743, cores: 1)
+spawned uWSGI worker 4 (pid: 19744, cores: 1)
+[pid: 19743|app: 0|req: 1/1] 172.18.0.38 () {46 vars in 793 bytes} [Thu Sep 29 02:40:27 2016] GET / => generated 0 bytes in 19 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 19744|app: 0|req: 1/2] 172.18.0.44 () {46 vars in 805 bytes} [Thu Sep 29 02:40:27 2016] GET /login/ => generated 834 bytes in 56 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19743|app: 0|req: 2/3] 172.18.0.38 () {52 vars in 966 bytes} [Thu Sep 29 02:40:30 2016] POST /login/ => generated 2537 bytes in 10 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19743|app: 0|req: 3/4] 172.18.0.38 () {46 vars in 805 bytes} [Thu Sep 29 02:44:31 2016] GET /login/ => generated 834 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19743|app: 0|req: 4/5] 172.18.0.44 () {52 vars in 966 bytes} [Thu Sep 29 02:44:34 2016] POST /login/ => generated 2537 bytes in 3 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19743|app: 0|req: 5/6] 172.18.0.44 () {46 vars in 805 bytes} [Thu Sep 29 02:44:43 2016] GET /login/ => generated 834 bytes in 29 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19743|app: 0|req: 6/7] 172.18.0.38 () {52 vars in 966 bytes} [Thu Sep 29 02:44:48 2016] POST /login/ => generated 2537 bytes in 14 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 02:45:31 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x27afdd0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x27afdd0 pid: 19796 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19796)
+spawned uWSGI worker 1 (pid: 19805, cores: 1)
+spawned uWSGI worker 2 (pid: 19806, cores: 1)
+spawned uWSGI worker 3 (pid: 19807, cores: 1)
+spawned uWSGI worker 4 (pid: 19808, cores: 1)
+[pid: 19806|app: 0|req: 1/1] 172.18.0.38 () {46 vars in 805 bytes} [Thu Sep 29 02:45:37 2016] GET /login/ => generated 834 bytes in 44 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 19806|app: 0|req: 2/2] 172.18.0.38 () {52 vars in 966 bytes} [Thu Sep 29 02:45:39 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 02:46:15 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0xa98dd0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0xa98dd0 pid: 19830 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19830)
+spawned uWSGI worker 1 (pid: 19839, cores: 1)
+spawned uWSGI worker 2 (pid: 19840, cores: 1)
+spawned uWSGI worker 3 (pid: 19841, cores: 1)
+spawned uWSGI worker 4 (pid: 19842, cores: 1)
+[pid: 19841|app: 0|req: 1/1] 172.18.0.38 () {54 vars in 997 bytes} [Thu Sep 29 02:46:20 2016] POST /login/ => generated 0 bytes in 34 msecs (HTTP/1.1 302) 5 headers in 247 bytes (1 switches on core 0)
+[pid: 19840|app: 0|req: 1/2] 172.18.0.44 () {48 vars in 837 bytes} [Thu Sep 29 02:46:21 2016] GET / => generated 11381 bytes in 134 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 19841|app: 0|req: 2/3] 172.18.0.44 () {46 vars in 793 bytes} [Thu Sep 29 02:46:25 2016] GET / => generated 11381 bytes in 126 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 19841|app: 0|req: 3/4] 172.18.0.38 () {48 vars in 891 bytes} [Thu Sep 29 02:46:28 2016] GET /GetProjectServerIP/?project_name=chat => generated 73 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+Not Found: /cache/global/img/gs.gif
+[pid: 19841|app: 0|req: 4/5] 93.174.93.136 () {32 vars in 437 bytes} [Thu Sep 29 05:55:08 2016] GET /cache/global/img/gs.gif => generated 2922 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19841|app: 0|req: 5/6] 101.201.208.37 () {26 vars in 285 bytes} [Thu Sep 29 06:21:24 2016] GET / => generated 0 bytes in 1 msecs (HTTP/1.0 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 19841|app: 0|req: 6/7] 101.201.208.37 () {26 vars in 286 bytes} [Thu Sep 29 06:21:31 2016] HEAD / => generated 0 bytes in 0 msecs (HTTP/1.0 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 19841|app: 0|req: 7/8] 218.17.157.250 () {44 vars in 782 bytes} [Thu Sep 29 10:46:14 2016] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 19840|app: 0|req: 2/9] 218.17.157.250 () {44 vars in 792 bytes} [Thu Sep 29 10:46:14 2016] GET /login => generated 0 bytes in 2 msecs (HTTP/1.1 301) 3 headers in 122 bytes (1 switches on core 0)
+[pid: 19842|app: 0|req: 1/10] 218.17.157.250 () {44 vars in 794 bytes} [Thu Sep 29 10:46:14 2016] GET /login/ => generated 834 bytes in 61 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 19841|app: 0|req: 8/11] 218.17.157.250 () {42 vars in 753 bytes} [Thu Sep 29 10:46:14 2016] GET /favicon.ico => generated 2892 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 19840|app: 0|req: 3/12] 218.17.157.250 () {42 vars in 813 bytes} [Thu Sep 29 10:46:14 2016] GET /favicon.ico => generated 2892 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 19841|app: 0|req: 9/13] 218.17.157.250 () {50 vars in 1004 bytes} [Thu Sep 29 10:46:23 2016] POST /login/ => generated 858 bytes in 5 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 10:47:31 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x271ae80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x271ae80 pid: 22085 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22085)
+spawned uWSGI worker 1 (pid: 22094, cores: 1)
+spawned uWSGI worker 2 (pid: 22095, cores: 1)
+spawned uWSGI worker 3 (pid: 22096, cores: 1)
+spawned uWSGI worker 4 (pid: 22097, cores: 1)
+[pid: 22095|app: 0|req: 1/1] 218.17.157.250 () {44 vars in 838 bytes} [Thu Sep 29 10:47:34 2016] GET /login/ => generated 834 bytes in 62 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+[pid: 22095|app: 0|req: 2/2] 218.17.157.250 () {50 vars in 1004 bytes} [Thu Sep 29 10:47:42 2016] POST /login/ => generated 858 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 256 bytes (1 switches on core 0)
+[pid: 22095|app: 0|req: 3/3] 218.17.157.250 () {50 vars in 1004 bytes} [Thu Sep 29 10:48:08 2016] POST /login/ => generated 0 bytes in 35 msecs (HTTP/1.1 302) 5 headers in 247 bytes (1 switches on core 0)
+[pid: 22094|app: 0|req: 1/4] 218.17.157.250 () {46 vars in 875 bytes} [Thu Sep 29 10:48:08 2016] GET / => generated 12985 bytes in 133 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+[pid: 22095|app: 0|req: 4/5] 172.18.0.44 () {44 vars in 726 bytes} [Thu Sep 29 10:49:06 2016] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 22097|app: 0|req: 1/6] 172.18.0.38 () {44 vars in 736 bytes} [Thu Sep 29 10:49:06 2016] GET /login => generated 0 bytes in 10 msecs (HTTP/1.1 301) 3 headers in 122 bytes (1 switches on core 0)
+[pid: 22095|app: 0|req: 5/7] 172.18.0.44 () {44 vars in 738 bytes} [Thu Sep 29 10:49:06 2016] GET /login/ => generated 834 bytes in 27 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 22094|app: 0|req: 2/8] 172.18.0.44 () {46 vars in 819 bytes} [Thu Sep 29 10:49:06 2016] GET /favicon.ico => generated 2888 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 22095|app: 0|req: 6/9] 172.18.0.44 () {56 vars in 1093 bytes} [Thu Sep 29 10:49:14 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 10:49:47 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1c4fe80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1c4fe80 pid: 22122 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22122)
+spawned uWSGI worker 1 (pid: 22131, cores: 1)
+spawned uWSGI worker 2 (pid: 22132, cores: 1)
+spawned uWSGI worker 3 (pid: 22133, cores: 1)
+spawned uWSGI worker 4 (pid: 22134, cores: 1)
+[pid: 22134|app: 0|req: 1/1] 172.18.0.44 () {56 vars in 1093 bytes} [Thu Sep 29 10:51:08 2016] POST /login/ => generated 858 bytes in 24 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 10:58:09 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1feee80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1feee80 pid: 22217 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22217)
+spawned uWSGI worker 1 (pid: 22226, cores: 1)
+spawned uWSGI worker 2 (pid: 22227, cores: 1)
+spawned uWSGI worker 3 (pid: 22228, cores: 1)
+spawned uWSGI worker 4 (pid: 22229, cores: 1)
+[pid: 22229|app: 0|req: 1/1] 172.18.0.38 () {48 vars in 902 bytes} [Thu Sep 29 10:58:12 2016] GET /login/ => generated 834 bytes in 44 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 22229|app: 0|req: 2/2] 172.18.0.44 () {56 vars in 1093 bytes} [Thu Sep 29 10:58:19 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22229|app: 0|req: 3/3] 172.18.0.44 () {52 vars in 968 bytes} [Thu Sep 29 11:01:45 2016] GET /login/ => generated 834 bytes in 25 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 22229|app: 0|req: 4/4] 172.18.0.38 () {60 vars in 1159 bytes} [Thu Sep 29 11:01:49 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22229|app: 0|req: 5/5] 172.18.0.44 () {52 vars in 968 bytes} [Thu Sep 29 11:04:04 2016] GET /login/ => generated 834 bytes in 26 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 22226|app: 0|req: 1/6] 172.18.0.44 () {50 vars in 885 bytes} [Thu Sep 29 11:04:04 2016] GET /favicon.ico => generated 2888 bytes in 21 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 11:11:21 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x2096e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x2096e80 pid: 22337 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22337)
+spawned uWSGI worker 1 (pid: 22346, cores: 1)
+spawned uWSGI worker 2 (pid: 22347, cores: 1)
+spawned uWSGI worker 3 (pid: 22348, cores: 1)
+spawned uWSGI worker 4 (pid: 22349, cores: 1)
+[pid: 22348|app: 0|req: 1/1] 172.18.0.38 () {50 vars in 924 bytes} [Thu Sep 29 11:12:11 2016] GET /startstoprestart/ => generated 0 bytes in 13 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 22349|app: 0|req: 1/2] 172.18.0.44 () {50 vars in 902 bytes} [Thu Sep 29 11:12:11 2016] GET /login/ => generated 834 bytes in 39 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 22348|app: 0|req: 2/3] 172.18.0.44 () {58 vars in 1130 bytes} [Thu Sep 29 11:12:13 2016] POST /login/ => generated 0 bytes in 21 msecs (HTTP/1.1 302) 5 headers in 247 bytes (1 switches on core 0)
+[pid: 22349|app: 0|req: 2/4] 172.18.0.44 () {52 vars in 971 bytes} [Thu Sep 29 11:12:13 2016] GET / => generated 12985 bytes in 112 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 22348|app: 0|req: 3/5] 172.18.0.44 () {50 vars in 997 bytes} [Thu Sep 29 11:13:08 2016] GET /GetProjectServerIP/?project_name=appointment => generated 145 bytes in 8 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 22348|app: 0|req: 4/6] 172.18.0.44 () {52 vars in 971 bytes} [Thu Sep 29 11:13:16 2016] GET / => generated 13105 bytes in 119 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 22348|app: 0|req: 5/7] 172.18.0.44 () {50 vars in 997 bytes} [Thu Sep 29 11:13:27 2016] GET /GetProjectServerIP/?project_name=appointment => generated 145 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 22348|app: 0|req: 6/8] 172.18.0.38 () {58 vars in 1112 bytes} [Thu Sep 29 11:13:30 2016] POST / => generated 248 bytes in 24973 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 22348|app: 0|req: 7/9] 172.18.0.44 () {50 vars in 934 bytes} [Thu Sep 29 11:13:58 2016] GET / => generated 13164 bytes in 120 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 11:18:12 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x280be80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x280be80 pid: 22634 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22634)
+spawned uWSGI worker 1 (pid: 22643, cores: 1)
+spawned uWSGI worker 2 (pid: 22644, cores: 1)
+spawned uWSGI worker 3 (pid: 22645, cores: 1)
+spawned uWSGI worker 4 (pid: 22646, cores: 1)
+[pid: 22643|app: 0|req: 1/1] 172.18.0.38 () {50 vars in 880 bytes} [Thu Sep 29 11:18:22 2016] GET / => generated 0 bytes in 11 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 22644|app: 0|req: 1/2] 172.18.0.44 () {50 vars in 892 bytes} [Thu Sep 29 11:18:22 2016] GET /login/ => generated 834 bytes in 47 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 22643|app: 0|req: 2/3] 172.18.0.38 () {50 vars in 884 bytes} [Thu Sep 29 11:18:22 2016] GET /favicon.ico => generated 2888 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 22643|app: 0|req: 3/4] 172.18.0.44 () {60 vars in 1158 bytes} [Thu Sep 29 11:18:25 2016] POST /login/ => generated 2537 bytes in 12 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22643|app: 0|req: 4/5] 218.17.157.250 () {44 vars in 840 bytes} [Thu Sep 29 11:19:15 2016] GET / => generated 0 bytes in 6 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 22644|app: 0|req: 2/6] 218.17.157.250 () {44 vars in 850 bytes} [Thu Sep 29 11:19:15 2016] GET /login => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 122 bytes (1 switches on core 0)
+[pid: 22645|app: 0|req: 1/7] 218.17.157.250 () {44 vars in 852 bytes} [Thu Sep 29 11:19:15 2016] GET /login/ => generated 834 bytes in 62 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 22643|app: 0|req: 5/8] 218.17.157.250 () {44 vars in 805 bytes} [Thu Sep 29 11:19:16 2016] GET /favicon.ico => generated 2892 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22643|app: 0|req: 6/9] 218.17.157.250 () {54 vars in 1084 bytes} [Thu Sep 29 11:19:19 2016] POST /login/ => generated 858 bytes in 6 msecs (HTTP/1.1 200) 4 headers in 256 bytes (1 switches on core 0)
+[pid: 22643|app: 0|req: 7/10] 218.17.157.250 () {44 vars in 835 bytes} [Thu Sep 29 11:24:07 2016] GET / => generated 0 bytes in 4 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 22644|app: 0|req: 3/11] 218.17.157.250 () {44 vars in 845 bytes} [Thu Sep 29 11:24:07 2016] GET /login => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 122 bytes (1 switches on core 0)
+[pid: 22645|app: 0|req: 2/12] 218.17.157.250 () {44 vars in 847 bytes} [Thu Sep 29 11:24:07 2016] GET /login/ => generated 834 bytes in 21 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 22643|app: 0|req: 8/13] 218.17.157.250 () {44 vars in 795 bytes} [Thu Sep 29 11:24:07 2016] GET /favicon.ico => generated 2887 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 22643|app: 0|req: 9/14] 218.17.157.250 () {54 vars in 1069 bytes} [Thu Sep 29 11:24:14 2016] POST /login/ => generated 858 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 256 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 11:26:07 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x146fe80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x146fe80 pid: 22818 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 22818)
+spawned uWSGI worker 1 (pid: 22827, cores: 1)
+spawned uWSGI worker 2 (pid: 22828, cores: 1)
+spawned uWSGI worker 3 (pid: 22829, cores: 1)
+spawned uWSGI worker 4 (pid: 22830, cores: 1)
+[pid: 22829|app: 0|req: 1/1] 172.18.0.44 () {50 vars in 1006 bytes} [Thu Sep 29 11:44:57 2016] GET /GetProjectServerIP/?project_name=appointmentAsync => generated 85 bytes in 19 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 11:47:15 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1398e80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x1398e80 pid: 23061 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23061)
+spawned uWSGI worker 1 (pid: 23070, cores: 1)
+spawned uWSGI worker 2 (pid: 23071, cores: 1)
+spawned uWSGI worker 3 (pid: 23072, cores: 1)
+spawned uWSGI worker 4 (pid: 23073, cores: 1)
+[pid: 23070|app: 0|req: 1/1] 172.18.0.44 () {50 vars in 924 bytes} [Thu Sep 29 11:47:21 2016] GET / => generated 0 bytes in 17 msecs (HTTP/1.1 302) 4 headers in 123 bytes (1 switches on core 0)
+[pid: 23071|app: 0|req: 1/2] 172.18.0.44 () {50 vars in 936 bytes} [Thu Sep 29 11:47:21 2016] GET /login/ => generated 834 bytes in 41 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 23070|app: 0|req: 2/3] 172.18.0.44 () {50 vars in 884 bytes} [Thu Sep 29 11:47:21 2016] GET /favicon.ico => generated 2888 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 23070|app: 0|req: 3/4] 172.18.0.44 () {60 vars in 1158 bytes} [Thu Sep 29 11:47:24 2016] POST /login/ => generated 2537 bytes in 8 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23070|app: 0|req: 4/5] 172.18.0.44 () {52 vars in 967 bytes} [Thu Sep 29 11:48:18 2016] GET /login/ => generated 834 bytes in 34 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 23070|app: 0|req: 5/6] 172.18.0.44 () {60 vars in 1158 bytes} [Thu Sep 29 11:48:24 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23070|app: 0|req: 6/7] 172.18.0.38 () {52 vars in 967 bytes} [Thu Sep 29 12:04:18 2016] GET /login/ => generated 834 bytes in 31 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 23070|app: 0|req: 7/8] 172.18.0.38 () {60 vars in 1158 bytes} [Thu Sep 29 12:04:20 2016] POST /login/ => generated 2537 bytes in 3 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 23070|app: 0|req: 8/9] 172.18.0.44 () {54 vars in 1006 bytes} [Thu Sep 29 12:20:37 2016] GET /login/ => generated 834 bytes in 23 msecs (HTTP/1.1 200) 5 headers in 385 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 23070|app: 0|req: 9/10] 172.18.0.44 () {62 vars in 1197 bytes} [Thu Sep 29 12:20:39 2016] POST /login/ => generated 2537 bytes in 4 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+Forbidden (Referer checking failed - Referer is insecure while host is secure.): /login/
+[pid: 23070|app: 0|req: 10/11] 172.18.0.44 () {64 vars in 1219 bytes} [Thu Sep 29 12:20:55 2016] POST /login/ => generated 2537 bytes in 3 msecs (HTTP/1.1 403) 2 headers in 80 bytes (1 switches on core 0)
+Not Found: /favicon.ico
+[pid: 23071|app: 0|req: 2/12] 172.18.0.44 () {56 vars in 976 bytes} [Thu Sep 29 12:20:55 2016] GET /favicon.ico => generated 2888 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+VACUUM: unix socket /home/fabu/hk_fabu2/mysite.sock removed.
+*** Starting uWSGI 2.0.13.1 (64bit) on [Thu Sep 29 12:21:33 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-17) on 28 September 2016 21:25:25
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: VPC-HK-FABU
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /home/fabu/hk_fabu2
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+chdir() to /home/fabu/hk_fabu2
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/fabu/hk_fabu2/mysite.sock fd 3
+Python version: 2.7.11 (default, Sep  8 2016, 19:29:04)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x122fe80
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 363840 bytes (355 KB) for 4 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x122fe80 pid: 23327 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 23327)
+spawned uWSGI worker 1 (pid: 23336, cores: 1)
+spawned uWSGI worker 2 (pid: 23337, cores: 1)
+spawned uWSGI worker 3 (pid: 23338, cores: 1)
+spawned uWSGI worker 4 (pid: 23339, cores: 1)
+[pid: 23338|app: 0|req: 1/1] 172.18.0.38 () {62 vars in 1197 bytes} [Thu Sep 29 12:21:36 2016] POST /login/ => generated 858 bytes in 26 msecs (HTTP/1.1 200) 2 headers in 88 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 2/2] 172.18.0.44 () {54 vars in 1003 bytes} [Thu Sep 29 12:39:22 2016] GET / => generated 13294 bytes in 122 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 3/3] 172.18.0.44 () {52 vars in 1035 bytes} [Thu Sep 29 12:39:35 2016] GET /GetProjectServerIP/?project_name=appointment => generated 145 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 4/4] 172.18.0.44 () {60 vars in 1150 bytes} [Thu Sep 29 12:39:39 2016] POST / => generated 248 bytes in 25075 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 5/5] 172.18.0.38 () {52 vars in 972 bytes} [Thu Sep 29 12:40:06 2016] GET / => generated 13403 bytes in 114 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 6/6] 172.18.0.44 () {52 vars in 1045 bytes} [Thu Sep 29 12:40:16 2016] GET /GetProjectServerIP/?project_name=appointmentAsync => generated 85 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 7/7] 172.18.0.38 () {60 vars in 1150 bytes} [Thu Sep 29 12:40:18 2016] POST / => generated 248 bytes in 11424 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 8/8] 172.18.0.38 () {52 vars in 972 bytes} [Thu Sep 29 12:40:33 2016] GET / => generated 13421 bytes in 122 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 9/9] 172.18.0.38 () {52 vars in 1031 bytes} [Thu Sep 29 12:41:28 2016] GET /GetProjectServerIP/?project_name=sysconfig => generated 78 bytes in 6 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 10/10] 172.18.0.44 () {54 vars in 1003 bytes} [Thu Sep 29 14:06:56 2016] GET / => generated 13537 bytes in 123 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 11/11] 172.18.0.44 () {52 vars in 1031 bytes} [Thu Sep 29 14:07:09 2016] GET /GetProjectServerIP/?project_name=sysconfig => generated 78 bytes in 4 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 12/12] 172.18.0.44 () {60 vars in 1150 bytes} [Thu Sep 29 14:07:12 2016] POST / => generated 248 bytes in 11868 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 23338|app: 0|req: 13/13] 172.18.0.38 () {52 vars in 972 bytes} [Thu Sep 29 14:07:56 2016] GET / => generated 13539 bytes in 118 msecs (HTTP/1.1 200) 4 headers in 231 bytes (1 switches on core 0)

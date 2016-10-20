@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div >
+    <a href="/logout">{{ LoginName }} 注销</a>
+    <br /><a href="/">返回发布页</a>
+</div>
+    <div class="center">
+        <p>
+            在下面框中编写项目模块信息</br>
+            格式如下：
+        </p>
+        <p>
+            [模块名]:模块端口</br>
+            #模块说明(一行，可不写)</br>
+            所部署的服务器IP1</br>
+            所部署的服务器IP2</br>
+            ...
+        </p>
+        <p>
+            比如：</br>
+            [test]:8080</br>
+            #test模块</br>
+            10.0.0.120</br>
+            10.0.0.140
+
+        </p>
+        <h3><p style="color:red">{{ ProjectInfoInputError }}</p></h3>
+        <form name="projectinfo" action="/projectinfo/" method="POST">
+        {% csrf_token %}
+            <p>
+            <textarea rows="20" cols="50" name="projectinfo">{% for i in projectinfo %}{{ i }}
+{% endfor %}
+</textarea>
+            </p>
+            <button type="submit">提 交</button>
+        </form>
+    </div>
+</body>
+<style type="text/css">
+<!--
+{#body {TEXT-ALIGN: center;}#}
+.center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }
+-->
+
+    body { TEXT-ALIGN: center; margin:0; padding:0; font-family:'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti; }
+
+</style>
+</html>

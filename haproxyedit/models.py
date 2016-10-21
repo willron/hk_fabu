@@ -23,7 +23,7 @@ class HaproxyServer(models.Model):
     ServerID = models.CharField(max_length=40, primary_key=True)
     ServerIP = models.GenericIPAddressField(unique=True)
     ServerComment = models.CharField(max_length=900, null=True, blank=True)
-    GroupID = models.ForeignKey(HaproxyGroup, on_delete=models.CASCADE, blank=True, null=True)
+    GroupID = models.ForeignKey(HaproxyGroup, on_delete=models.SET_NULL, blank=True, null=True)
 
     def __unicode__(self):
         return self.ServerIP

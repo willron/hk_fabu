@@ -97,7 +97,7 @@
                                                     </div>
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                                        <button type="button" class="btn btn-primary" id="modifyhaproxygrouppost">提交</button>
+                                                        <button type="button" class="btn btn-primary" id="addhaproxygrouppost">新增</button>
                                                     </div>
                                                 </div><!-- /.modal-content -->
                                             </div><!-- /.modal -->
@@ -135,111 +135,17 @@
                                                     编辑
                                                 </button>
 
-                                                <div class="modal fade" id="ModifyGroupModal" tabindex="-1" role="dialog" aria-labelledby="ModifyGroupModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title center" id="ModifyGroupModalLabel">编辑组信息</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <div class="row">
-                                                                    <div class="col-lg-12">
-                                                                        <form id="modifyhaproxygroup" class="form-horizontal" role="form">
-                                                                        {% csrf_token %}
-                                                                            <div class="form-group">
-                                                                                <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
-                                                                                    组ID:
-                                                                                </label>
-                                                                                <div class="col-lg-9">
-                                                                                    <input type="text" name="HG_Modify_GroupID" class="input-xlarge" required="required" readonly="true"/>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
-                                                                                    组名:
-                                                                                </label>
-                                                                                <div class="col-lg-9">
-                                                                                    <input type="text" name="HG_Modify_GroupName" class="input-xlarge" required="required" placeholder="只允许大小写字母数字与下划线"/>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="form-field-2" class="col-lg-3 control-label no-padding-right">
-                                                                                    显示名:
-                                                                                </label>
-                                                                                <div class="col-lg-9">
-                                                                                    <input type="text" name="HG_Modify_GroupDisplayName" class="input-xlarge"/>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="form-field-3" class="col-lg-3 control-label no-padding-right">
-                                                                                    配置文件路径:
-                                                                                </label>
-                                                                                <div class="col-lg-9">
-                                                                                    <input type="text" name="HG_Modify_ServerConfigFilePath" class="input-xlarge" placeholder="留空则使用默认路径"/>
-                                                                                </div>
-                                                                            </div>
-                                                                            <div class="form-group">
-                                                                                <label for="form-field-4" class="col-lg-3 control-label no-padding-right">
-                                                                                    备注:
-                                                                                </label>
-                                                                                <div class="col-lg-9">
-                                                                                    <input type="text" name="HG_Modify_GroupComment" class="input-xlarge"/>
-                                                                                </div>
-                                                                            </div>
-                                                                        </form>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                                                <button type="button" class="btn btn-primary" id="modifyhaproxygrouppost">提交</button>
-                                                            </div>
-                                                        </div><!-- /.modal-content -->
-                                                    </div><!-- /.modal -->
-                                                </div>
-
-                                                <button class="btn btn-minier btn-danger btn-white btn-bold" name="delserver">
+                                                <button class="btn btn-minier btn-danger btn-white btn-bold" name="delgroup">
                                                     <i class="ace-icon fa fa-trash-o bigger-120"></i>
                                                     删除
                                                 </button>
-                                                <div class="modal fade" id="DelServerModal" tabindex="-1" role="dialog" aria-labelledby="delServerModalLabel" aria-hidden="true">
-                                                    <div class="modal-dialog">
-                                                        <div class="modal-content">
-                                                            <div class="modal-header">
-                                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title center" id="delServerModalLabel">删除Haproxy转发服务器</h4>
-                                                            </div>
-                                                            <div class="modal-body">
-                                                                <div>
-                                                                    <p class="red">
-                                                                        请注意:
-                                                                        下列Haproxy服务器将被删除，此操作不可逆！
-                                                                    </p>
-                                                                    <p>
-                                                                        <table class="table table-condensed">
-                                                                            <thead>
-                                                                                <tr>
-                                                                                    <th>ID</th>
-                                                                                    <th>IP地址</th>
-                                                                                    <th>备注</th>
-                                                                                </tr>
-                                                                            </thead>
-                                                                            <tbody>
-                                                                            <tr id="delServerTable">
 
-                                                                            </tr></tbody>
-                                                                        </table>
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal-footer">
-                                                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                                                                <button type="button" class="btn btn-danger" id="delhaproxyserverpost">删除</button>
-                                                            </div>
-                                                        </div><!-- /.modal-content -->
-                                                    </div><!-- /.modal -->
-                                                </div>
+                                                <button class="btn btn-minier btn-primary btn-white btn-bold" name="groupmember">
+                                                    <i class="ace-icon glyphicon glyphicon-user bigger-110"></i>
+                                                    组成员
+                                                </button>
+
+
                                             </div>
                                         </td>
                                     </tr>
@@ -248,9 +154,134 @@
                             </table>
                         </div>
                     </div>
-
-
                 </div>
+
+                <!-- 弹出框 -->
+                <div class="modal fade" id="ModifyGroupModal" tabindex="-1" role="dialog" aria-labelledby="ModifyGroupModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title center" id="ModifyGroupModalLabel">编辑组信息</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <form id="modifyhaproxygroup" class="form-horizontal" role="form">
+                                        {% csrf_token %}
+                                            <div class="form-group">
+                                                <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
+                                                    组ID:
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="HG_Modify_GroupID" class="input-xlarge" required="required" readonly="true"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
+                                                    组名:
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="HG_Modify_GroupName" class="input-xlarge" required="required" placeholder="只允许大小写字母数字与下划线"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="form-field-2" class="col-lg-3 control-label no-padding-right">
+                                                    显示名:
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="HG_Modify_GroupDisplayName" class="input-xlarge"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="form-field-3" class="col-lg-3 control-label no-padding-right">
+                                                    配置文件路径:
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="HG_Modify_ServerConfigFilePath" class="input-xlarge" placeholder="留空则使用默认路径"/>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="form-field-4" class="col-lg-3 control-label no-padding-right">
+                                                    备注:
+                                                </label>
+                                                <div class="col-lg-9">
+                                                    <input type="text" name="HG_Modify_GroupComment" class="input-xlarge"/>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                                <button type="button" class="btn btn-primary" id="modifyhaproxygrouppost">修改</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal -->
+                </div>
+                <div class="modal fade" id="DelGroupModal" tabindex="-1" role="dialog" aria-labelledby="delGroupModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title center" id="delGroupModalLabel">删除转发组</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div>
+                                    <p class="red">
+                                        请注意:
+                                        下列转发组将被删除，此操作不可逆！
+                                    </p>
+                                    <p>
+                                        <table class="table table-condensed">
+                                            <thead>
+                                                <tr>
+                                                    <th>组ID</th>
+                                                    <th>组名</th>
+                                                    <th>显示名</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr id="delGroupTable">
+
+                                            </tr></tbody>
+                                        </table>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-danger" id="delhaproxygrouppost">删除</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal -->
+                </div>
+                <div class="modal fade" id="GroupMemberModal" tabindex="-1" role="dialog" aria-labelledby="GroupMemberModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                <h4 class="modal-title center" id="GroupMemberModalLabel">组成员编辑</h4>
+                            </div>
+                            <div class="modal-body">
+
+                                <div class="row">
+                                    <div class='col-lg-12'>
+                                        <select multiple='multiple' size='10' name='selectgroupmember_name' class='selectgroupmember' id="selectgroupmember">
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                <button type="button" class="btn btn-primary" id="groupmemberpost">确定</button>
+                            </div>
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal -->
+                </div>
+                <!-- 弹出框 -->
 
                 <div id="HaproxyServers" class="tab-pane fade">
                     <div class="row">
@@ -430,6 +461,40 @@
 
 {% include "template_footer.html" %}
 <script>
+
+    //激活组成员窗口
+    $("button[name='groupmember']").click(function () {
+        var demo2 = $('.selectgroupmember').bootstrapDualListbox({
+            selectedListLabel: "组成员",
+            nonSelectedListLabel: "可选组成员",
+            infoTextEmpty: false,
+            infoText: false,
+            selectorMinimalHeight: 200,
+            moveAllLabel: "选择所有",
+            removeAllLabel: "移除所有",
+            filterPlaceHolder: "过滤器"
+        });
+        groupid = getgrouptdinfo(this).groupid;
+        $.getJSON("#",{groupid : groupid},  function (json) {
+            $(".selectgroupmember").empty();
+            $.each(json.BindedServer, function (k, v) {
+                $("#selectgroupmember").append("<option value='"+k+"' selected='selected'>"+v+"</option>");
+                demo2.bootstrapDualListbox('refresh');
+            });
+            $.each(json.CanBindServer, function (k, v) {
+                $(".selectgroupmember").append("<option value='"+k+"'>"+v+"</option>");
+                demo2.bootstrapDualListbox('refresh');
+            })
+        })
+{#        demo2.bootstrapDualListbox('refresh');#}
+{#            $('#showValue').click(function () {#}
+{#                alert($("[name='selectgroupmember']").val());#}
+{#            });#}
+        $('#GroupMemberModal').modal({
+            keyboard: true
+        })
+    });
+
     //激活组增加窗口
     $("#addgroup").click(function () {
         $('#AddGroupModal').modal({
@@ -463,28 +528,27 @@
         $("#modifyhaproxyserver").find("input[name='HS_Modify_ServerID']").attr("value", haproxyserver.serverid);
         $("#modifyhaproxyserver").find("input[name='HS_Modify_ServerIP']").attr("value", haproxyserver.serverip);
         $("#modifyhaproxyserver").find("input[name='HS_Modify_ServerComment']").attr("value", haproxyserver.servercomment);
-{#        $("#modifyServerTable").empty();#}
-{#        $("#modifyhaproxyserver").find("caption").remove();#}
-{#        var modifytabletd_id = $("<td>");#}
-{#        var modifytabletd_id_input = $("<input>", {"readonly": "true", "value": haproxyserver.serverid, "class": "input-small", "name": "HS_Modify_ServerID"});#}
-{#            modifytabletd_id_input.appendTo(modifytabletd_id)#}
-{##}
-{#        var modifytabletd_ip = $("<td>");#}
-{#        var modifytabletd_ip_input = $("<input>", {"name": "HS_Modify_ServerIP", "value": haproxyserver.serverip, "class": "input-medium"});#}
-{#            modifytabletd_ip_input.appendTo(modifytabletd_ip);#}
-{##}
-{#        var modifytabletd_comment = $("<td>");#}
-{#            modifytabletd_comment_input = $("<input>", {"name": "HS_Modify_ServerComment", "value": haproxyserver.servercomment, "class": "input-xlarge"});#}
-{#            modifytabletd_comment_input.appendTo(modifytabletd_comment);#}
-{#        $("#modifyServerTable").append(modifytabletd_id).append(modifytabletd_ip).append(modifytabletd_comment);#}
         $('#ModifyServerModal').modal({
+            keyboard: true
+        })
+    });
+
+    //激活组删除窗口
+    $("button[name='delgroup']").click(function () {
+        haproxygroup = getgrouptdinfo($(this));
+        $("#delGroupTable").empty();
+        $("#delGroupTable").append("<td>"+haproxygroup.groupid+"</td><td>"+haproxygroup.groupname+"</td><td>"+haproxygroup.groupcomment+"</td>");
+        $('#DelGroupModal').modal({
             keyboard: true
         })
     });
 
     //激活服务器删除窗口
     $("button[name='delserver']").click(function () {
-        haproxyserver = gettdidipcomment($(this));
+
+
+        haproxyserver = getservertdidipcomment($(this));
+        console.log(haproxyserver)
         $("#delServerTable").empty();
         $("#delServerTable").append("<td>"+haproxyserver.serverid+"</td><td>"+haproxyserver.serverip+"</td><td>"+haproxyserver.servercomment+"</td>");
         $('#DelServerModal').modal({
@@ -493,9 +557,24 @@
     });
 
     //组增加操作POST
-    $("#modifyhaproxygrouppost").click(function () {
+    $("#addhaproxygrouppost").click(function () {
         formdata = $("#addhaproxygroup").serializeArray();
         ajaxpost(formdata);
+    })
+
+    //组编辑操作POST
+    $("#modifyhaproxygrouppost").click(function () {
+        formdata = $("#modifyhaproxygroup").serializeArray();
+        ajaxpost(formdata);
+    })
+
+    //组删除操作POST
+    $("#delhaproxygrouppost").click(function () {
+        delgroupobj = new Object();
+        delgroupobj.HG_Del_GroupID = $("#delGroupTable td").first().text();
+        csrftoken = $("{% csrf_token %}").attr("value");
+        delgroupobj.csrfmiddlewaretoken = csrftoken;
+        ajaxpost(delgroupobj);
     })
 
     //服务器增加操作POST
@@ -507,7 +586,6 @@
     //服务器编辑操作POST
     $("#modifyhaproxyserverpost").click(function () {
         formdata = $("#modifyhaproxyserver").serializeArray();
-        console.log(formdata)
         ajaxpost(formdata);
     })
 
@@ -572,6 +650,18 @@
     </script>
 
 {% endifnotequal %}
+
+<script>
+
+        $(function () {
+{#            var demo2 = $('.selectgroupmember').bootstrapDualListbox();#}
+{##}
+{#            $('#showValue').click(function () {#}
+{#                alert($("[name='selectgroupmember']").val());#}
+{#            });#}
+        });
+
+</script>
 
 	</body>
 </html>

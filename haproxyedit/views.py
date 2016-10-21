@@ -33,7 +33,6 @@ def check_ip_and_separate_operation(postdate):
     for k, v in unprocess.items():
         if k != 'csrfmiddlewaretoken':
             t = k.split('_')
-            # print k,v,t
             processed['table'] = t[0]
             processed['operation'] = t[1]
             if k.endswith('ID'):
@@ -41,7 +40,7 @@ def check_ip_and_separate_operation(postdate):
             if k.endswith('IP'):
                 processed['target']['ip'] = v.strip()
             if k.endswith('Comment'):
-                processed['target']['comment'] = v.strip()
+                processed['target']['comment'] = v.strip() if v != '' else '无'
             if k.endswith('ConfigFilePath'):
                 processed['target']['configfilepath'] = v.strip() if v != '' else '/usr/local/haproxy/etc/haproxy.cfg'
             if k.endswith('GroupName'):
@@ -49,7 +48,6 @@ def check_ip_and_separate_operation(postdate):
             if k.endswith('GroupDisplayName'):
                 processed['target']['groupdisplayname'] = v.strip()
 
-    print processed
     if 'ip' in processed['target']:
         checkip = RE_IP.match(processed['target']['ip'])
         if not checkip:
@@ -65,23 +63,34 @@ def haproxyedit(request):
         return HttpResponseRedirect('/login')
 
     if request.method == 'GET':
-        LoginName = request.session['LoginName']
 
-        allserver = HaproxyServer.objects.all()
-        allgroup = HaproxyGroup.objects.all()
-        group_with_server = {}
-        for group in allgroup:
-            ForeignKey_server = group.haproxyserver_set.all()
-            group_with_server[group.GroupID] = ForeignKey_server
+        if 'groupid' in request.GET:
+            groupid = request.GET['groupid']
+
+            bindedserver = HaproxyServer.objects.filter(GroupID=groupid)
+            canbindserver = HaproxyServer.objects.filter(GroupID__isnull=True)
+
+            return HttpResponse(json.dumps({'BindedServer': dict([(i.ServerID, i.ServerIP) for i in bindedserver]),
+                                            'CanBindServer': dict([(i.ServerID, i.ServerIP) for i in canbindserver])}))
+
+        else:
+
+            LoginName = request.session['LoginName']
+
+            allserver = HaproxyServer.objects.all()
+            allgroup = HaproxyGroup.objects.all()
+            group_with_server = {}
+            for group in allgroup:
+                ForeignKey_server = group.haproxyserver_set.all()
+                group_with_server[group.GroupID] = ForeignKey_server
 
 
-        return render(request, "haproxyedit.html", {'LoginName': LoginName,
-                                                    'HaproxyServer': allserver,
-                                                    'HaproxyGroup': allgroup
-                                                    })
+            return render(request, "haproxyedit.html", {'LoginName': LoginName,
+                                                        'HaproxyServer': allserver,
+                                                        'HaproxyGroup': allgroup
+                                                        })
     else:
         postdata = request.POST
-        print postdata
         goodpostdata = check_ip_and_separate_operation(postdata)
 
         if not goodpostdata:
@@ -94,6 +103,7 @@ def haproxyedit(request):
                 result = {'state': 'success'}
 
                 if goodpostdata['operation'] == 'Add':
+                    # 组添加操作
                     if '' in target.values():
                         result = {'state': 'false', 'msg': '参数欠缺'}
 
@@ -112,10 +122,29 @@ def haproxyedit(request):
                             result = {'state': 'false', 'msg': '组名重复'}
 
                 elif goodpostdata['operation'] == 'Modify':
-                    pass
+                    # 组编辑操作
+                    if '' in target.values():
+                        result = {'state': 'false', 'msg': '参数欠缺'}
+
+                    elif not re.match(r'\w{1,20}', target['groupname']):
+                        result = {'state': 'false', 'msg': '组名只能使用大小写字母数字与下划线'}
+
+                    else:
+                        try:
+                            updatedb = HaproxyGroup.objects.get(GroupID=target['id'])
+                            updatedb.GroupName = target['groupname']
+                            updatedb.GroupComment = target['comment']
+                            updatedb.ServerConfigFilePath = target['configfilepath']
+                            updatedb.GroupDisplayName = target['groupdisplayname']
+                            updatedb.save()
+                        except IntegrityError:
+                            result = {'state': 'false', 'msg': '组名重复'}
 
                 elif goodpostdata['operation'] == 'Del':
-                    pass
+                    try:
+                        HaproxyGroup.objects.get(GroupID=target['id']).delete()
+                    except HaproxyGroup.DoesNotExist:
+                        result = {'state': 'false', 'msg': '无效组ID'}
 
             elif goodpostdata['table'] == 'HS':
                 # HaproxyServer操作

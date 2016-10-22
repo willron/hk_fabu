@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+{% block mycontent %}
+<!-- new code -->
+<div class="row">
+    <h1 class="header">项目模块管理</h1>
+    <div class="col-lg-3">
+        <p class="lead">
+            在下面框中编写项目模块信息<br />
+            格式如下：<br />
+            <br />
+            [模块名]:模块端口<br />
+            #模块说明(一行，可不写)<br />
+            所部署的服务器IP1<br />
+            所部署的服务器IP2<br />
+            <br />
+            比如：<br />
+            <b><i>[test]:8080</i></b><br />
+            <b><i>#test模块</i></b><br />
+            <b><i>10.0.0.120</i></b><br />
+            <b><i>10.0.0.140</i></b>
+        </p>
+        <h4 class="red text-right">{{ ProjectInfoInputError }}</h4>
+    </div>
+    <div class="col-lg-3 col-lg-offset-1 center">
+        <form name="projectinfo" action="/projectinfo" method="POST">
+            {% csrf_token %}
+            <textarea rows="20" cols="30" name="projectinfo">{% for i in projectinfo %}{{ i }}
+{% endfor %}
+            </textarea>
+            <button type="submit" class="btn btn-primary">提 交</button>
+        </form>
+    </div>
+</div>
+
+<!-- new code  -->
+
+
+
+{#    <div class="center">#}
+{#        <p>#}
+{#            在下面框中编写项目模块信息</br>#}
+{#            格式如下：#}
+{#        </p>#}
+{#        <p>#}
+{#            [模块名]:模块端口</br>#}
+{#            #模块说明(一行，可不写)</br>#}
+{#            所部署的服务器IP1</br>#}
+{#            所部署的服务器IP2</br>#}
+{#        </p>#}
+{#        <p>#}
+{#            比如：</br>#}
+{#            [test]:8080</br>#}
+{#            #test模块</br>#}
+{#            10.0.0.120</br>#}
+{#            10.0.0.140#}
+{##}
+{#        </p>#}
+{##}
+{##}
+{#        <h3><p style="color:red">{{ ProjectInfoInputError }}</p></h3>#}
+{#        <form name="projectinfo" action="/projectinfo/" method="POST">#}
+{#        {% csrf_token %}#}
+{#            <p>#}
+{#            <textarea rows="20" cols="50" name="projectinfo">{% for i in projectinfo %}{{ i }}#}
+{#{% endfor %}#}
+{#</textarea>#}
+{#            </p>#}
+{#            <button type="submit" class="btn btn-primary">提 交</button>#}
+{#        </form>#}
+{#    </div>#}
+{#<style type="text/css">#}
+{#<!--#}
+{#body {TEXT-ALIGN: center;}#}
+{#.center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }#}
+{#-->#}
+{##}
+{#    body {  font-family:'Hiragino Sans GB','Microsoft Yahei',"WenQuanYi Micro Hei",SimSun,Tahoma,Arial,Helvetica,STHeiti; }#}
+{##}
+{#</style>#}
+{% endblock %}

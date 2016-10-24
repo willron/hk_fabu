@@ -7,7 +7,6 @@
 {% endblock %}
 
 {% block mycontent %}
-<a id="iamtop"></a>
 <div class="row" id="formpost">
     <div class="col-lg-2"><h5 class="smaller text-success">每次请求日志最后100条记录</h5></div>
 
@@ -54,8 +53,8 @@
                     </button>
                 </div>
     <div class="col-lg-2">
-        <a href="#iambottom">
-            <i class="ace-icon fa fa-angle-double-down "><h6>下翻到底</h6></i>
+        <a id="gotoboottom" href="">
+            <i class="ace-icon fa fa-angle-double-down "><h6>直达底部</h6></i>
         </a>
     </div>
     </div>
@@ -154,5 +153,11 @@
     $('.chosen-select').siblings('.chosen-container').css({'width':w});
         $('input').siblings('.input-xlarge').css({'width':w});
     }).triggerHandler('resize.chosen');
+</script>
+<script>
+    $("#gotoboottom").click(function () {
+        $("body, html").animate({scrollTop: $(document).height()}, 500);
+        return false;
+    })
 </script>
 {% endblock %}

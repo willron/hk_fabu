@@ -19,7 +19,7 @@ def runplaybook(project_name, serverlist_operation, operation):
         except_server_cmd = ''.join(':!'+i for i in except_server)
 
     project_host = project_name + except_server_cmd
-    status, output = commands.getstatusoutput(OPERATION_CMD % (operation_yml_path, project_host, project_name, operation))
+    status, output = commands.getstatusoutput(OPERATION_CMD % (OPERATION_YML_PATH, project_host, project_name, operation))
     return status, output
 
 

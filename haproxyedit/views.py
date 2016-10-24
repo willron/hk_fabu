@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponseRedirect
 from django.db import IntegrityError
 from haproxyedit.models import *
+from public.publicvar import ANSILBE_HAPROXYHOSTS
 import json
 import hashlib
 import uuid

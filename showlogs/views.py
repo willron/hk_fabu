@@ -19,7 +19,7 @@ def check_and_read_log(d, logfilenames):
         nfs_path = strip_list[0]
         serverip = strip_list[1]
         project_name = strip_list[2]
-        logfile = strip_list[-1] if len(strip_list[-1]) == 5 else "catalina.out"
+        logfile = strip_list[-1] if len(strip_list) == 5 else "catalina.out"
         print strip_list
         path_with_serverip = '/' + nfs_path + '/' + serverip
         path_with_projectname = path_with_serverip + '/' + project_name

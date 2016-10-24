@@ -18,4 +18,4 @@ class Logging(models.Model):
     project_name = models.CharField(max_length=200)     # 项目名
     dest_server = models.CharField(max_length=200)      # 目标服务器
     deployment_pack = models.CharField(max_length=100, null=True)
-    log_date = models.CharField(max_length=99999)     # 日志内容
+    log_date = models.TextField()     # 日志内容

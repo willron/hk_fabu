@@ -14,7 +14,7 @@ def read_project_name(section=None):
     # all_project_name = Project.objects.values_list('project_name', 'project_server')
 
     conf = ConfigParser.ConfigParser()
-    conf.read(ansible_hosts)
+    conf.read(ANSILBE_HOSTS)
     if section:
         return conf.options(section)
     return conf.sections()

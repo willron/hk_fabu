@@ -15,10 +15,10 @@ import tarfile
 import re
 
 
-# ansible_hosts = '/etc/ansible/hosts.bak'        # ansible的hosts文件路径
-# # ansible_hosts = '/home/fabu/.ansible/hosts.bak'        # ansible的hosts文件路径
+# ANSILBE_HOSTS = '/etc/ansible/hosts.bak'        # ansible的hosts文件路径
+# # ANSILBE_HOSTS = '/home/fabu/.ansible/hosts.bak'        # ansible的hosts文件路径
 # fabu_yml_path = '/home/fabu/ansible_playbook/fabu.yml '     # 用于升级发布时的playbook文件路径
-# newfabu_yml_path = '/home/fabu/ansible_playbook/newfabu.yml '       # 用于全新发布时的playbook文件路径
+# NEWFABU_YML_PATH = '/home/fabu/ansible_playbook/newfabu.yml '       # 用于全新发布时的playbook文件路径
 # ansible-playbook命令
 cmd = 'ansible-playbook %s --extra-vars "project_name=%s project_pack=%s project_port=%s backup_time=%s" -f %d -v'
 
@@ -32,7 +32,7 @@ cmd = 'ansible-playbook %s --extra-vars "project_name=%s project_pack=%s project
 #     # all_project_name = Project.objects.values_list('project_name', 'project_server')
 #
 #     conf = ConfigParser.ConfigParser()
-#     conf.read(ansible_hosts)
+#     conf.read(ANSILBE_HOSTS)
 #     if section:
 #         return conf.options(section)
 #     return conf.sections()
@@ -168,7 +168,7 @@ def index(request):
 
         server_list = read_project_name(project_name)       # 获取模块服务器列表
 
-        (the_yml_path, str_fabu) = (newfabu_yml_path, '(全新部署)') if 'newfabu' in request.POST else (fabu_yml_path, '(增量部署)')    # 判断是否为全新发布
+        (the_yml_path, str_fabu) = (NEWFABU_YML_PATH, '(全新部署)') if 'newfabu' in request.POST else (FABU_YML_PATH, '(增量部署)')    # 判断是否为全新发布
 
         if 'newfabu' not in request.POST:
         #     for i in server_list:

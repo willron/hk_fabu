@@ -10,8 +10,8 @@ import ConfigParser
 import re
 
 
-#the_ssh_port = 9055     # 服务器默认SSH端口，会统一加到ansible的hosts文件中
-#ansible_hosts = '/home/fabu/.ansible/hosts'        # ansible的hosts文件路径
+#THE_SSH_PORT = 9055     # 服务器默认SSH端口，会统一加到ansible的hosts文件中
+#ANSILBE_HOSTS = '/home/fabu/.ansible/hosts'        # ansible的hosts文件路径
 
 re_find_project_name = re.compile(r'^\[[0-9a-zA-Z_]{,30}\]:.*')       # 允许的项目名
 
@@ -141,7 +141,7 @@ def projectinfo(request):
             if len(set(all_project_port)) != len(all_project_port):
                 raise ProjectInfoInputError('有重复的端口！')
 
-            add_port = _add_port(project_lists, port=the_ssh_port)       # 为IP地址添加端口
+            add_port = _add_port(project_lists, port=THE_SSH_PORT)       # 为IP地址添加端口
 
             write_line = []
             # 将项目信息转换为列表以便写入hosts文件
@@ -163,7 +163,7 @@ def projectinfo(request):
 
             try:        # 写入hosts文件
                 f.seek(0)       # 指针回位
-                with open(ansible_hosts, 'w') as hosts:
+                with open(ANSILBE_HOSTS, 'w') as hosts:
                     hosts.write(f.read().encode("UTF-8"))
             except IOError:
                 raise ProjectInfoInputError('ansible hosts文件写入失败')

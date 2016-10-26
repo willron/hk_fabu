@@ -28,6 +28,9 @@ class HaproxyServer(models.Model):
     def __unicode__(self):
         return self.ServerIP
 
+class BoolInfo(models.Model):
+    WaitForCreateAnsibleHostsFile = models.BooleanField()
+
 # class TCPForward(models.Model):
 #     TCPForwardID = models.CharField(max_length=40, primary_key=True)
 #     TCPForwardName = models.CharField(max_length=40)

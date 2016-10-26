@@ -49,6 +49,7 @@ def check_ip_and_separate_operation(postdate):
             if k.endswith('GroupDisplayName'):
                 processed['target']['groupdisplayname'] = v.strip()
 
+
     if 'ip' in processed['target']:
         checkip = RE_IP.match(processed['target']['ip'])
         if not checkip:
@@ -77,7 +78,7 @@ def haproxyedit(request):
         else:
 
             LoginName = request.session['LoginName']
-
+            WaitForCreateAnsibleHostsFile = BoolInfo.objects.get(id=1).WaitForCreateAnsibleHostsFile
             allserver = HaproxyServer.objects.all()
             allgroup = HaproxyGroup.objects.all()
             group_with_server = {}
@@ -88,12 +89,38 @@ def haproxyedit(request):
 
             return render(request, "haproxyedit.html", {'LoginName': LoginName,
                                                         'HaproxyServer': allserver,
-                                                        'HaproxyGroup': allgroup
-                                                        })
+                                                        'HaproxyGroup': allgroup,
+                                                        'WaitForCreateAnsibleHostsFile': WaitForCreateAnsibleHostsFile})
     else:
         postdata = request.POST
-        goodpostdata = check_ip_and_separate_operation(postdata)
+        if 'HG_Select_GroupID' in postdata:
+            result = {'state': 'success'}
+            GroupMemberList = postdata.getlist('HG_Select_GroupMember')
+            GroupID = postdata['HG_Select_GroupID']
+            try:
+                Group = HaproxyGroup.objects.get(GroupID=GroupID)
+                OldMember = [i.ServerID for i in Group.haproxyserver_set.all()]
+                DelMember = list(set(OldMember) - set(GroupMemberList))
+                NewMember = list(set(GroupMemberList) - set(OldMember))
 
+                # 删组成员
+                map(lambda x: HaproxyServer.objects.filter(ServerID=x).update(GroupID=None), DelMember)
+                # 加组成员
+                map(lambda x: HaproxyServer.objects.filter(ServerID=x).update(GroupID=Group), NewMember)
+
+                BoolInfo.objects.filter(id=1).update(WaitForCreateAnsibleHostsFile=True)
+
+            except HaproxyServer.DoesNotExist or HaproxyGroup.DoesNotExist:
+                result = {'state': 'false', 'msg': '无效ID！'}
+
+        if 'createansiblefile' in postdata:
+
+
+            BoolInfo.objects.filter(id=1).update(WaitForCreateAnsibleHostsFile=False)
+
+            return HttpResponseRedirect('/haproxyedit/')
+
+        goodpostdata = check_ip_and_separate_operation(postdata)
         if not goodpostdata:
             result = {'state': 'false', 'msg': '无效IP！'}
 

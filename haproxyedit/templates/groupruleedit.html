@@ -26,8 +26,8 @@
                     </div>
 
                     <div class="panel-collapse collapse in" id="collapseOne" aria-expanded="true">
-                        <div class="panel-body">
-                           ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.
+                        <div class="panel-body" id="didi">
+                            {% include "acl.html" %}
                         </div>
                         </div>
                 </div>
@@ -68,10 +68,26 @@
             </div>
         </div>
     </div>
+    <button id="cici">aaaa</button>
 {% endblock %}
 
 {% block myscript %}
+    <script>
 
+    $.ajaxSetup({
+    data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+});
+
+        $("#cici").click(function () {
+            $.post("",function (result) {
+                var reg = new RegExp('falsemsg');
+                if(reg.test(result)){
+                    var aa = JSON.parse(result);
+                    alert(aa.falsemsg)
+                }else{$("#didi").html(result);}
+            })
+        })
+    </script>
 <script>
     function ajaxpost(formdata) {
         $.ajax({

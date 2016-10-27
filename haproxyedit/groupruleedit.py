@@ -7,6 +7,7 @@ from django.shortcuts import HttpResponse
 from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import render
 from haproxyedit.models import *
+import json
 
 def index(request, groupid):
 
@@ -27,5 +28,9 @@ def index(request, groupid):
 
         return render(request, "groupruleedit.html", {'LoginName': LoginName,
                                                     'HaproxyServer': allserver,
-                                                    'HaproxyGroup': allgroup
+                                                    'HaproxyGroup': allgroup,
+                                                      'test': 'teaaast'
                                                     })
+    else:
+        # return render(request, "acl.html", {'test': 'good.good'})
+        return HttpResponse(json.dumps({'falsemsg': 'falsefalse'}))

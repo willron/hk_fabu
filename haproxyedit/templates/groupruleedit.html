@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block mycss %}
+{% endblock %}
+
+{% block mycontent %}
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="header">组转发规则配置</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="accordion" class="accordion-style1 panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true">
+                                <i class="bigger-110 ace-icon fa fa-angle-down" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+                                ACL
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="panel-collapse collapse in" id="collapseOne" aria-expanded="true">
+                        <div class="panel-body">
+                           ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.ACL.
+                        </div>
+                        </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false">
+                                <i class="bigger-110 ace-icon fa fa-angle-right" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+                                ACTION
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="panel-collapse collapse" id="collapseTwo" aria-expanded="false" style="height: 0px;">
+                        <div class="panel-body">
+                            ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.ACTION.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
+                                <i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+                                BACKEND
+                            </a>
+                        </h4>
+                    </div>
+
+                    <div class="panel-collapse collapse" id="collapseThree" aria-expanded="false">
+                        <div class="panel-body">
+                            BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.BACKEND.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block myscript %}
+
+<script>
+    function ajaxpost(formdata) {
+        $.ajax({
+                    type: "POST",
+                    url: "#",
+                    data: formdata,
+                    dataType: "json",
+                    success: function (data) {
+                        if(data.state == 'success')
+                        {window.location = '/haproxyedit/';}else {alert(data.msg)};
+
+                    },
+                    error: function (err) {
+                                        alert("服务器错误！提交失败");
+        }
+    });
+    }
+</script>
+
+{% ifnotequal HaproxyGroup|length 0 %}
+
+    <script>
+        $(function () {
+            var sidebarul = $("<ul>", {"class": "submenu"});
+            {% for group in HaproxyGroup %}
+            sidebarul.append("<li><a href='/haproxyedit/{{ group.GroupID }}/'><i class='menu-icon fa fa-caret-right'></i>{{ group.GroupDisplayName }}</a></li>");
+            {% endfor %}
+            $("#haproxyedit").addClass("active").append(sidebarul);
+            groupID = window.location.pathname.split("/");
+            the_a = $("a[href='/haproxyedit/"+groupID[groupID.length-2]+"/']")
+            ico_str = the_a.text();
+            the_a.parent().addClass("active");
+            the_a.parent().parent().siblings("a").append("<b class='arrow fa fa-angle-down'></b>")
+        })
+    </script>
+
+{% endifnotequal %}
+
+{% endblock %}

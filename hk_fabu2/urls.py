@@ -20,6 +20,7 @@ from projectinfo import views as projectinfo_views
 from rollback import views as rollback_views
 from startstoprestart import views as startstoprestart_views
 from haproxyedit import views as haproxyedit_views
+from haproxyedit import groupruleedit as groupruleedit_views
 from showlogs import views as showlogs_views
 
 urlpatterns = [
@@ -32,7 +33,8 @@ urlpatterns = [
     url(r'^rollback/$', rollback_views.rollback, name='rollback'),
     url(r'^GetBackupName/$', rollback_views.get_backup_name, name='get_backup_name'),
     url(r'^startstoprestart/$', startstoprestart_views.startstoprestart, name='startstoprestart'),
-    url(r'^haproxyedit/$', haproxyedit_views.haproxyedit, name='haproxyedit_views'),
+    url(r'^haproxyedit/$', haproxyedit_views.haproxyedit, name='haproxyedit'),
     url(r'^showlogs/$', showlogs_views.showlogs, name='showlogs'),
+    url(r'^haproxyedit/(HG_[a-f0-9]{32})/$', groupruleedit_views.index, name='groupruleedit'),
 ]
 

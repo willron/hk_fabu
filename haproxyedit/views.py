@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.shortcuts import HttpResponseRedirect
 from django.db import IntegrityError
 from haproxyedit.models import *
-from public.publicvar import ANSILBE_HAPROXYHOSTS
+from public.publicvar import ANSILBE_HAPROXYHOSTS, THE_SSH_PORT
 import json
 import hashlib
 import uuid
@@ -115,7 +115,27 @@ def haproxyedit(request):
 
         if 'createansiblefile' in postdata:
 
+            import StringIO
+            fs = StringIO.StringIO()
+            allgroup = HaproxyGroup.objects.all()
 
+            for eachgroup in allgroup:
+                string_eachgroup = '''[{}]\n#{}\n{}\n\n'''.format(eachgroup.GroupName.encode('utf8'),
+                                                                eachgroup.GroupComment.encode('utf8'),
+                                                                '\n'.join(
+                                                                    [i.ServerIP.encode('utf8') + ':' +
+                                                                     str(THE_SSH_PORT)
+                                                                     for i in eachgroup.haproxyserver_set.all()
+                                                                     ]
+                                                                ))
+                fs.write(string_eachgroup)
+
+            fs.seek(0)
+            hostsfile = open(ANSILBE_HAPROXYHOSTS, 'w')
+            hostsfile.write(fs.read())
+
+            hostsfile.close()
+            fs.close()
             BoolInfo.objects.filter(id=1).update(WaitForCreateAnsibleHostsFile=False)
 
             return HttpResponseRedirect('/haproxyedit/')

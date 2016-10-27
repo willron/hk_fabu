@@ -289,7 +289,7 @@
                 if(path == '/'){
                     $("#Deployment").addClass('active');
                 }else{
-                    path = path.replace(/\//g,'');
+                    path = path.split("/")[1];
                     $("#"+path).addClass('active');
                 }
             });

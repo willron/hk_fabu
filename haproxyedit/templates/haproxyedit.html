@@ -670,7 +670,7 @@
         $(function () {
             var sidebarul = $("<ul>", {"class": "submenu"});
             {% for group in HaproxyGroup %}
-            sidebarul.append("<li><a href='/haproxyedit/{{ group.GroupID }}/'>{{ group.GroupDisplayName }}</a></li>");
+            sidebarul.append("<li><a href='/haproxyedit/{{ group.GroupID }}/'><i class='menu-icon fa fa-caret-right'></i>{{ group.GroupDisplayName }}</a></li>");
             {% endfor %}
             $("#haproxyedit").append(sidebarul);
         })

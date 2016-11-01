@@ -68,8 +68,9 @@ def haproxyedit(request):
 
         if 'groupid' in request.GET:
             groupid = request.GET['groupid']
+            print groupid
 
-            bindedserver = HaproxyServer.objects.filter(GroupID=groupid)
+            bindedserver = HaproxyServer.objects.filter(GroupID=HaproxyGroup.objects.get(GroupID=groupid))
             canbindserver = HaproxyServer.objects.filter(GroupID__isnull=True)
 
             return HttpResponse(json.dumps({'BindedServer': dict([(i.ServerID, i.ServerIP) for i in bindedserver]),

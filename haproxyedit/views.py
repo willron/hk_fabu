@@ -82,10 +82,10 @@ def haproxyedit(request):
             WaitForCreateAnsibleHostsFile = BoolInfo.objects.get(id=1).WaitForCreateAnsibleHostsFile
             allserver = HaproxyServer.objects.all()
             allgroup = HaproxyGroup.objects.all()
-            group_with_server = {}
-            for group in allgroup:
-                ForeignKey_server = group.haproxyserver_set.all()
-                group_with_server[group.GroupID] = ForeignKey_server
+            # group_with_server = {}
+            # for group in allgroup:
+            #     ForeignKey_server = group.haproxyserver_set.all()
+            #     group_with_server[group.GroupID] = ForeignKey_server
 
 
             return render(request, "haproxyedit.html", {'LoginName': LoginName,
@@ -225,3 +225,18 @@ def haproxyedit(request):
 
         return HttpResponse(json.dumps(result))
 
+
+def aclrule(request):
+    if 'LoginName' not in request.session:
+        # 用户未登录跳转
+        return HttpResponseRedirect('/login')
+    if request.method == 'GET':
+        return render(request, 'acl.html')
+
+
+def webbackendcluster(request):
+    if 'LoginName' not in request.session:
+        # 用户未登录跳转
+        return HttpResponseRedirect('/login')
+    if request.method == 'GET':
+        return render(request, 'webbackendcluster.html')

@@ -28,8 +28,7 @@ def index(request, groupid):
 
         return render(request, "groupruleedit.html", {'LoginName': LoginName,
                                                     'HaproxyServer': allserver,
-                                                    'HaproxyGroup': allgroup,
-                                                      'test': 'teaaast'
+                                                    'HaproxyGroup': allgroup
                                                     })
     else:
         # return render(request, "acl.html", {'test': 'good.good'})

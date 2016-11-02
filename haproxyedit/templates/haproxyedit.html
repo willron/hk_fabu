@@ -21,7 +21,6 @@
             <ul class="nav nav-tabs" id="myTab">
                 <li class="active">
                     <a data-toggle="tab" href="#HaproxyGroup" aria-expanded="true">
-{#                        <i class="green ace-icon fa fa-home bigger-120"></i>#}
                         Haproxy全局组
                     </a>
                 </li>
@@ -32,6 +31,17 @@
                     </a>
                 </li>
 
+                <li class="">
+                    <a data-toggle="tab" href="#ACLRule" aria-expanded="false">
+                        ACL全局规则
+                    </a>
+                </li>
+
+                <li class="">
+                    <a data-toggle="tab" href="#WebBackendCluster" aria-expanded="false">
+                        后端集群全局规则
+                    </a>
+                </li>
             </ul>
 
             <div class="tab-content">
@@ -473,7 +483,8 @@
                     <!-- /模态框 -->
                 </div>
 
-
+                <div id="ACLRule" class="tab-pane fade"></div>
+                <div id="WebBackendCluster" class="tab-pane fade"></div>
             </div>
         </div>
     </div>
@@ -484,11 +495,6 @@
 {% block myscript %}
 <script src="{% static "js/jquery.bootstrap-duallistbox.js" %}"></script>
 <script>
-
-    //生成ansible host文件
-    $("#createansiblefile").click(function () {
-
-    })
 
     //激活组成员窗口
     $("button[name='groupmember']").click(function () {
@@ -675,6 +681,8 @@
     <script>
         $(function () {
             var sidebarul = $("<ul>", {"class": "submenu"});
+{#            sidebarul.append("<li><a href='/haproxyedit/ACLRule/'><i class='menu-icon fa fa-caret-right'></i>ACLRule</a></li>");#}
+{#            sidebarul.append("<li><a href='/haproxyedit/WebBackendCluster/'><i class='menu-icon fa fa-caret-right'></i>WebBackendCluster</a></li>");#}
             {% for group in HaproxyGroup %}
             sidebarul.append("<li><a href='/haproxyedit/{{ group.GroupID }}/'><i class='menu-icon fa fa-caret-right'></i>{{ group.GroupDisplayName }}</a></li>");
             {% endfor %}
@@ -683,5 +691,30 @@
     </script>
 
 {% endifnotequal %}
+
+    <script>
+
+        $("a[href='#ACLRule']").click(function () {
+            $.get("/haproxyedit/ACLRule/",function (result) {
+                var reg = new RegExp('falsemsg');
+                if(reg.test(result)){
+                    var aa = JSON.parse(result);
+                    alert(aa.falsemsg)
+                }else{$("#ACLRule").html(result);}
+            })
+        });
+
+        $("a[href='#WebBackendCluster']").click(function () {
+            $.get("/haproxyedit/WebBackendCluster/",function (result) {
+                var reg = new RegExp('falsemsg');
+                if(reg.test(result)){
+                    var aa = JSON.parse(result);
+                    alert(aa.falsemsg)
+                }else{$("#WebBackendCluster").html(result);}
+            })
+        });
+
+
+    </script>
 
 {% endblock %}

@@ -36,5 +36,7 @@ urlpatterns = [
     url(r'^haproxyedit/$', haproxyedit_views.haproxyedit, name='haproxyedit'),
     url(r'^showlogs/$', showlogs_views.showlogs, name='showlogs'),
     url(r'^haproxyedit/(HG_[a-f0-9]{32})/$', groupruleedit_views.index, name='groupruleedit'),
+    url(r'^haproxyedit/WebBackendCluster/$', haproxyedit_views.webbackendcluster, name='webbackendcluster'),
+    url(r'^haproxyedit/ACLRule/$', haproxyedit_views.aclrule, name='aclrule'),
 ]
 

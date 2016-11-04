@@ -494,6 +494,9 @@
 
 {% block myscript %}
 <script src="{% static "js/jquery.bootstrap-duallistbox.js" %}"></script>
+<script src="{% static "js/dataTables/jquery.dataTables.js" %}"></script>
+<script src="{% static "js/dataTables/jquery.dataTables.bootstrap.js" %}"></script>
+<script src="{% static "js/bootstrap-tag.js" %}"></script>
 <script>
 
     //激活组成员窗口
@@ -585,6 +588,12 @@
         $('#DelServerModal').modal({
             keyboard: true
         })
+    });
+
+    //增加后端集群POST
+        $("#addwebbackendclusterpost").click(function () {
+        formadta = $("#addwebbackendclusterform").serializeArray();
+            ajaxpost(formdata)
     });
 
     //组成员编辑操作POST
@@ -706,13 +715,15 @@
 
         $("a[href='#WebBackendCluster']").click(function () {
             $.get("/haproxyedit/WebBackendCluster/",function (result) {
-                var reg = new RegExp('falsemsg');
-                if(reg.test(result)){
-                    var aa = JSON.parse(result);
-                    alert(aa.falsemsg)
-                }else{$("#WebBackendCluster").html(result);}
+{#                var reg = new RegExp('falsemsg');#}
+{#                if(reg.test(result)){#}
+{#                    var aa = JSON.parse(result);#}
+{#                    alert(aa.falsemsg)#}
+                $("#WebBackendCluster").html(result);
+{#                }else{$("#WebBackendCluster").html(result);}#}
             })
         });
+
 
 
     </script>

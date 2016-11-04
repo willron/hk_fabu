@@ -55,11 +55,17 @@ class ACLRule(models.Model):
 
 class WebBackendCluster(models.Model):
     BackendID = models.CharField(max_length=40, unique=True)
+    CreateTime = models.DateTimeField(auto_now_add=True)    # 创建时间
+    UpdateTime = models.DateTimeField(auto_now=True)    # 更新时间
     BackendClusterName = models.CharField(max_length=40, unique=True)
     BackendServersList = models.TextField()
+    Comment = models.CharField(max_length=900, null=True, blank=True)
 
     def __unicode__(self):
         return self.BackendClusterName
+
+    def serverslist_to_list(self):
+        return self.BackendServersList.split(',')
 
 
 class ActionRule(models.Model):
@@ -76,6 +82,8 @@ class ActionRule(models.Model):
 
 
 class ACLRuleJudgeInActionRule(models.Model):
+    CreateTime = models.DateTimeField(auto_now_add=True)    # 创建时间
+    UpdateTime = models.DateTimeField(auto_now=True)    # 更新时间
     ACLRuleID = models.ForeignKey(ACLRule)
     ActionRuleID = models.ForeignKey(ActionRule)
     Inverse = models.BooleanField(default=False)     # 此ACL规则在Action规则中是否取反

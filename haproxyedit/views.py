@@ -12,7 +12,7 @@ import uuid
 import re
 
 
-RE_IP = re.compile(r'((([1-9]?|1\d)\d|2([0-4]\d|5[0-5]))\.){3}(([1-9]?|1\d)\d|2([0-4]\d|5[0-5]))')
+RE_IP = re.compile(r'^((([1-9]?|1\d)\d|2([0-4]\d|5[0-5]))\.){3}(([1-9]?|1\d)\d|2([0-4]\d|5[0-5]))$')
 
 
 def UUID_TO_MD5_CharField(tbname=None):
@@ -68,7 +68,6 @@ def haproxyedit(request):
 
         if 'groupid' in request.GET:
             groupid = request.GET['groupid']
-            print groupid
 
             bindedserver = HaproxyServer.objects.filter(GroupID=HaproxyGroup.objects.get(GroupID=groupid))
             canbindserver = HaproxyServer.objects.filter(GroupID__isnull=True)
@@ -153,10 +152,11 @@ def haproxyedit(request):
 
                 if goodpostdata['operation'] == 'Add':
                     # 组添加操作
+                    print target['groupname']
                     if '' in target.values():
                         result = {'state': 'false', 'msg': '参数欠缺'}
 
-                    elif not re.match(r'\w{1,20}', target['groupname']):
+                    elif not re.match(r'^[a-zA-Z]\w{1,19}$', target['groupname']):
                         result = {'state': 'false', 'msg': '组名只能使用大小写字母数字与下划线'}
 
                     else:
@@ -171,11 +171,12 @@ def haproxyedit(request):
                             result = {'state': 'false', 'msg': '组名重复'}
 
                 elif goodpostdata['operation'] == 'Modify':
+                    # checkgroupname = re.compile(r'[a-zA-Z]\w{1,19}')
                     # 组编辑操作
                     if '' in target.values():
                         result = {'state': 'false', 'msg': '参数欠缺'}
 
-                    elif not re.match(r'\w{1,20}', target['groupname']):
+                    elif not re.match(r'^[a-zA-Z]\w{1,19}$', target['groupname']):
                         result = {'state': 'false', 'msg': '组名只能使用大小写字母数字与下划线'}
 
                     else:
@@ -239,4 +240,60 @@ def webbackendcluster(request):
         # 用户未登录跳转
         return HttpResponseRedirect('/login')
     if request.method == 'GET':
-        return render(request, 'webbackendcluster.html')
+        allbackend = WebBackendCluster.objects.all().order_by('-CreateTime')
+        return render(request, 'webbackendcluster.html', {'AllBackend': allbackend})
+
+    else:
+        print request.POST
+        SERVERSLIST_RE = re.compile(r'^((\d{1,3}\.){3}\d{1,3}:\d{1,5},)*(\d{1,3}\.){3}\d{1,3}:\d{1,5}$')
+        if 'WBC_Add_BackendClusterName' in request.POST:
+            backendclustername = request.POST['WBC_Add_BackendClusterName']
+            serverslist = ''.join(request.POST['serverslist'].split(' '))
+            comment = request.POST['comment']
+            if not re.match(r'^[a-zA-Z]\w{1,19}$', backendclustername):
+                return HttpResponse(json.dumps({'falsemsg': '无效的集群名'}))
+            elif not SERVERSLIST_RE.match(str(serverslist)):
+                return HttpResponse(json.dumps({'falsemsg': '无效的后端服务器IP'}))
+            try:
+                wdb = WebBackendCluster(BackendID=UUID_TO_MD5_CharField('WBC'),
+                                        BackendClusterName=backendclustername,
+                                        BackendServersList=serverslist,
+                                        Comment=comment)
+                wdb.save()
+                allbackend = WebBackendCluster.objects.all().order_by('-CreateTime')
+                return render(request, 'webbackendcluster.html', {'AllBackend': allbackend})
+
+            except Exception:
+                return HttpResponse(json.dumps({'falsemsg': '数据库写入错误'}))
+
+        elif 'WBC_Del_BackendClusterID' in request.POST:
+            WBC_Del_BackendClusterID = request.POST['WBC_Del_BackendClusterID']
+            try:
+                ddb = WebBackendCluster.objects.get(BackendID=WBC_Del_BackendClusterID)
+                ddb.delete()
+                allbackend = WebBackendCluster.objects.all().order_by('-CreateTime')
+                return render(request, 'webbackendcluster.html', {'AllBackend': allbackend})
+            except WebBackendCluster.DoesNotExist:
+                return HttpResponse(json.dumps({'falsemsg': '无效ID'}))
+
+        elif 'WBC_Modify_BackendClusterID' in request.POST:
+            WBC_Modify_BackendClusterID = request.POST['WBC_Modify_BackendClusterID']
+            WBC_Modify_BackendClusterName = request.POST['WBC_Modify_BackendClusterName']
+            WBC_Modify_BackendClusterServersList = ''.join(request.POST['WBC_Modify_BackendClusterServersList'].split(' '))
+            WBC_Modify_BackendClusterComment = request.POST['WBC_Modify_BackendClusterComment']
+            if not re.match(r'^[a-zA-Z]\w{1,19}$', str(WBC_Modify_BackendClusterName)):
+                return HttpResponse(json.dumps({'falsemsg': '无效的集群名'}))
+            elif not SERVERSLIST_RE.match(str(WBC_Modify_BackendClusterServersList)):
+                return HttpResponse(json.dumps({'falsemsg': '无效的后端服务器IP'}))
+            try:
+                udb = WebBackendCluster.objects.get(BackendID=WBC_Modify_BackendClusterID)
+                udb.BackendClusterName = WBC_Modify_BackendClusterName
+                udb.BackendServersList = WBC_Modify_BackendClusterServersList
+                udb.Comment = WBC_Modify_BackendClusterComment
+                udb.save()
+                allbackend = WebBackendCluster.objects.all().order_by('-CreateTime')
+                return render(request, 'webbackendcluster.html', {'AllBackend': allbackend})
+            except WebBackendCluster.DoesNotExist:
+                return HttpResponse(json.dumps({'falsemsg': '无效ID'}))
+
+

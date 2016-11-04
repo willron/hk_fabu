@@ -1,88 +1,351 @@
 <div class="row">
     <div class="col-lg-12">
-        <table class="table table-striped table-bordered table-hover">
+        <table class="table table-striped table-bordered table-hover" id="WebBackendClusterTable">
             <thead>
                 <tr>
-                    <th>ACL ID</th>
-                    <th>ACL Name</th>
-                    <th>显示名</th>
-                    <th>组成员</th>
-                    <th>Haproxy配置文件路径</th>
-                    <th>备注</th>
-                    <th>
+                    <th style="color: #707070">集群ID</th>
+                    <th style="color: #707070">集群名</th>
+                    <th style="color: #707070">后端结点</th>
+                    <th style="color: #707070">备注</th>
+                    <th style="color: #707070">
                         操作&nbsp;&nbsp;&nbsp;
-                        <button class="btn btn-minier btn-success btn-white" id="addaclrule" >
+                        <button class="btn btn-minier btn-success btn-white" id="addwebbackendcluster" >
                             <i class="ace-icon glyphicon glyphicon-plus "></i>
                             新增
                         </button>
 
-                        <div class="modal fade" id="AddACLRuleModal" tabindex="-1" role="dialog" aria-labelledby="AddACLRuleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                        <h4 class="modal-title center" id="AddACLRuleModalLabel">新增全局ACL规则</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <form id="addaclruleform" class="form-horizontal" role="form">
-                                                {% csrf_token %}
-                                                    <div class="form-group">
-                                                        <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
-                                                            组名:
-                                                        </label>
-                                                        <div class="col-lg-9">
-                                                            <input type="text" name="" class="input-xlarge" required="required" placeholder="只允许大小写字母数字与下划线"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="form-field-2" class="col-lg-3 control-label no-padding-right">
-                                                            显示名:
-                                                        </label>
-                                                        <div class="col-lg-9">
-                                                            <input type="text" name="" class="input-xlarge"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="form-field-3" class="col-lg-3 control-label no-padding-right">
-                                                            配置文件路径:
-                                                        </label>
-                                                        <div class="col-lg-9">
-                                                            <input type="text" name="" class="input-xlarge" placeholder="留空则使用默认路径"/>
-                                                        </div>
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label for="form-field-4" class="col-lg-3 control-label no-padding-right">
-                                                            备注:
-                                                        </label>
-                                                        <div class="col-lg-9">
-                                                            <input type="text" name="" class="input-xlarge"/>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                                        <button type="button" class="btn btn-primary" id="addaclrulepost">新增</button>
-                                    </div>
-                                </div><!-- /.modal-content -->
-                            </div><!-- /.modal -->
-                        </div>
-
                     </th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody>
+                {% for each in AllBackend %}
+                    <tr>
+                        <td>{{ each.BackendID }} </td>
+                        <td>{{ each.BackendClusterName }}</td>
+                        <td>
+                            {% for i in each.serverslist_to_list %}
+                                {{ i }}<br />
+                            {% endfor %}
+                        </td>
+{#                        <td>{% if each.Comment %}{{ each.Comment }}{% else %}无{% endif %}</td>#}
+                        <td>{{ each.Comment|default:'无' }}</td>
+                        <td>
+                            <div class="btn-group">
+
+                                <button class="btn btn-minier btn-info btn-white btn-bold" name="modifywebbackendcluster">
+                                    <i class="ace-icon fa fa-pencil bigger-120"></i>
+                                    编辑
+                                </button>
+
+                                <button class="btn btn-minier btn-danger btn-white btn-bold" name="delwebbackendcluster">
+                                    <i class="ace-icon fa fa-trash-o bigger-120"></i>
+                                    删除
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
         </table>
+        <!-- model -->
+        <div class="modal fade" id="AddWebBackendClusterModal" tabindex="-1" role="dialog" aria-labelledby="AddWebBackendClusterModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title center" id="AddWebBackendClusterModalLabel">新增Web后端集群</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form id="addwebbackendclusterform" class="form-horizontal" role="form">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
+                                            集群名:
+                                        </label>
+                                        <div class="col-lg-9">
+                                            <input type="text" name="WBC_Add_BackendClusterName" class="input-xlarge" required="required" placeholder="只允许大小写字母数字与下划线"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-field-2" class="col-lg-3 control-label no-padding-right">
+                                            节点服务器:
+                                        </label>
+                                        <div class="col-lg-9">
+{#                                            <input type="text" name="" class="input-xlarge"/>#}
+                                            <input type="text" name="serverslist" id="form-addserverslist-tags" value="" placeholder="输入后回车再输第二个"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-field-4" class="col-lg-3 control-label no-padding-right">
+                                            备注:
+                                        </label>
+                                        <div class="col-lg-9">
+                                            <input type="text" name="comment" class="input-xlarge"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="addwebbackendclusterpost">新增</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <div class="modal fade" id="ModifyWebBackendClusterModal" tabindex="-1" role="dialog" aria-labelledby="ModifyWebBackendClusterModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                         <h4 class="modal-title center" id="ModifyWebBackendClusterModalLabel">编辑Haproxy转发服务器</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <form id="modifywebbackendclusterform" class="form-horizontal" role="form">
+                                    {% csrf_token %}
+                                    <div class="form-group">
+                                        <label for="form-field-0" class="col-lg-3 control-label no-padding-right">
+                                            集群ID:
+                                        </label>
+                                        <div class="col-lg-9">
+                                            <input type="text" name="WBC_Modify_BackendClusterID" class="input-xlarge" required="required" readonly="true" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-field-1" class="col-lg-3 control-label no-padding-right">
+                                            集群名:
+                                        </label>
+                                        <div class="col-lg-9">
+                                            <input type="text" name="WBC_Modify_BackendClusterName" class="input-xlarge" required="required" placeholder="只允许大小写字母数字与下划线"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-field-2" class="col-lg-3 control-label no-padding-right">
+                                            节点服务器:
+                                        </label>
+                                        <div class="col-lg-9">
+                                            {#                                            <input type="text" name="" class="input-xlarge"/>#}
+                                            <input type="text" name="WBC_Modify_BackendClusterServersList" id="form-modifyserverslist-tags"  placeholder="输入后回车再输第二个"/>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-field-4" class="col-lg-3 control-label no-padding-right">
+                                            备注:
+                                        </label>
+                                        <div class="col-lg-9">
+                                            <input type="text" name="WBC_Modify_BackendClusterComment" class="input-xlarge"/>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                        <button type="button" class="btn btn-primary" id="modifywebbackendclusterpost">提交</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <div class="modal fade" id="DelWebBackendClusterModal" tabindex="-1" role="dialog" aria-labelledby="DelWebBackendClusterModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title center" id="DelWebBackendClusterLabel">删除Web后端集群</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div>
+                            <p class="red">
+                            请注意:
+                            下列Web后端集群被删除，此操作不可逆！
+                            </p>
+                            <p>
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>集群名</th>
+                                            <th>后端结点</th>
+                                            <th>备注</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr id="delWebBackendClusterTable">
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="button" class="btn btn-danger" id="delwebbackendclusterpost">删除</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal -->
+        </div>
+        <!-- /model -->
     </div>
 </div>
+
 <script>
-    $("#addaclrule").click(function () {
-        $("#AddACLRuleModal").modal({
+
+    $.ajaxSetup({
+    data: {csrfmiddlewaretoken: '{{ csrf_token }}' },
+});
+
+    //增加后端集群POST
+    $("#addwebbackendclusterpost").click(function () {
+    formdate = $("#addwebbackendclusterform").serializeArray();
+        $.post("/haproxyedit/WebBackendCluster/",formdate,function (result) {
+        reg = new RegExp("^\{\"falsemsg");
+        if(reg.test(result)){
+{#           var falsemsg = JSON.parse(result);#}
+            var falsemsg = eval('('+result+')');
+            alert(falsemsg.falsemsg);
+        }
+            else{
+                    $("#WebBackendCluster").html(result);}
+        })
+    });
+
+    //修改后端集群POST
+    $("#modifywebbackendclusterpost").click(function () {
+        formdate = $("#modifywebbackendclusterform").serializeArray();
+        $.post("/haproxyedit/WebBackendCluster/",formdate,function (result) {
+            reg = new RegExp("^\{\"falsemsg");
+            if(reg.test(result)){
+                {#           var falsemsg = JSON.parse(result);#}
+                var falsemsg = eval('('+result+')');
+                alert(falsemsg.falsemsg);
+            }
+            else{
+                $("#WebBackendCluster").html(result);}
+        })
+    });
+
+    //删除集群POST
+    $("#delwebbackendclusterpost").click(function () {
+        WBC_Del_BackendClusterID = $("#add_webbackendclusterid").text()
+        $.post("/haproxyedit/WebBackendCluster/", {"WBC_Del_BackendClusterID": WBC_Del_BackendClusterID}, function (result) {
+            reg = new RegExp("^\{\"falsemsg");
+            if(reg.test(result)){
+                {#           var falsemsg = JSON.parse(result);#}
+                var falsemsg = eval('('+result+')');
+                alert(falsemsg.falsemsg);
+            }
+            else{
+                $("#WebBackendCluster").html(result);}
+        })
+    })
+
+    //激活增加集群窗口
+    $("#addwebbackendcluster").click(function () {
+        $("#AddWebBackendClusterModal").modal({
+            keyboard: true
+        })
+    });
+
+    //激活修改集群窗口
+    $("button[name='modifywebbackendcluster']").click(function () {
+        wbc = $(this).parents("td").prevAll()
+        webbackendclusterid = wbc[3].innerText;
+        webbackendclustername = wbc[2].innerText;
+        webbackendclusterserverslist = wbc[1].innerText;
+        webbackendclustercomment = wbc[0].innerText;
+        $("input[name='WBC_Modify_BackendClusterID']").val(webbackendclusterid);
+        $("input[name='WBC_Modify_BackendClusterName']").val(webbackendclustername);
+        $("input[name='WBC_Modify_BackendClusterServersList']").attr("value", webbackendclusterserverslist.replace("\n", ","));
+        while($("#modifywebbackendclusterform").find(".tag").length > 0){
+                        $("#form-modifyserverslist-tags").data("tag").remove(0);
+        }
+        $.each(webbackendclusterserverslist.trim("\n").split("\n"),function (i,v) {
+            $("#form-modifyserverslist-tags").data("tag").add(v);
+        })
+        $("input[name='WBC_Modify_BackendClusterComment']").val(webbackendclustercomment);
+
+        $("#ModifyWebBackendClusterModal").modal({
             keyboard: true
         })
     })
+
+    //激活删除集群窗口
+    $("button[name='delwebbackendcluster']").click(function () {
+        wbc = $(this).parents("td").prevAll()
+        webbackendclusterid = wbc[3].innerText;
+        webbackendclustername = wbc[2].innerText;
+        webbackendclusterserverslist = wbc[1].innerHTML;
+        webbackendclustercomment = wbc[0].innerText;
+        $("#delWebBackendClusterTable").empty()
+        $("#delWebBackendClusterTable").append("<td id='add_webbackendclusterid'>"+webbackendclusterid+"</td><td>"+webbackendclustername+"</td><td>"+webbackendclusterserverslist+"</td><td>"+webbackendclustercomment+"</td>")
+        $("#DelWebBackendClusterModal").modal({
+            keyboard: true
+        })
+    })
+
+    var WebBackendClusterTable =
+    $('#WebBackendClusterTable')
+    .dataTable({
+{#    "columns":[#}
+{#        {"width": "30%"},#}
+{#        null,#}
+{#        null,#}
+{#        null,#}
+{#        null#}
+{#    ],#}
+    "ordering": false,
+     "language": {
+             "sProcessing":   "处理中...",
+    "sLengthMenu":   "显示 _MENU_ 项结果",
+    "sZeroRecords":  "没有匹配结果",
+    "sInfo":         "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+    "sInfoEmpty":    "显示第 0 至 0 项结果，共 0 项",
+    "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+    "sInfoPostFix":  "",
+    "sSearch":       "搜索:",
+    "sUrl":          "",
+    "sEmptyTable":     "表中数据为空",
+    "sLoadingRecords": "载入中...",
+    "sInfoThousands":  ",",
+    "oPaginate": {
+        "sFirst":    "首页",
+        "sPrevious": "上页",
+        "sNext":     "下页",
+        "sLast":     "末页"
+    },
+    "oAria": {
+        "sSortAscending":  ": 以升序排列此列",
+        "sSortDescending": ": 以降序排列此列"
+    }
+    }
+    })
+
+var tag_input = $('#form-addserverslist-tags');
+try{
+   tag_input.tag({
+      placeholder: tag_input.attr('placeholder'),
+   });
+}
+catch(e) {
+   //display a textarea for old IE, because it doesn't support this plugin or another one I tried!
+   tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
+}
+
+    var tag_input = $('#form-modifyserverslist-tags');
+    try{
+        tag_input.tag({
+            placeholder: tag_input.attr('placeholder'),
+        });
+    }
+    catch(e) {
+        //display a textarea for old IE, because it doesn't support this plugin or another one I tried!
+        tag_input.after('<textarea id="'+tag_input.attr('id')+'" name="'+tag_input.attr('name')+'" rows="3">'+tag_input.val()+'</textarea>').remove();
+    }
 </script>

@@ -152,7 +152,7 @@ def haproxyedit(request):
 
                 if goodpostdata['operation'] == 'Add':
                     # 组添加操作
-                    print target['groupname']
+                    # print target['groupname']
                     if '' in target.values():
                         result = {'state': 'false', 'msg': '参数欠缺'}
 
@@ -244,7 +244,7 @@ def webbackendcluster(request):
         return render(request, 'webbackendcluster.html', {'AllBackend': allbackend})
 
     else:
-        print request.POST
+        # print request.POST
         SERVERSLIST_RE = re.compile(r'^((\d{1,3}\.){3}\d{1,3}:\d{1,5},)*(\d{1,3}\.){3}\d{1,3}:\d{1,5}$')
         if 'WBC_Add_BackendClusterName' in request.POST:
             backendclustername = request.POST['WBC_Add_BackendClusterName']
